@@ -1,0 +1,52 @@
+name: Correction
+description: A cell in this dataset is wrong, out of date, or missing
+title: "[correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are the point of publishing this. If you work for one of the
+        manufacturers listed, you are especially welcome here.
+
+        One request: send the document. A correction we cannot source is a
+        correction we cannot make, because the whole value of this dataset is
+        that every cell traces to a primary document.
+  - type: input
+    id: row
+    attributes:
+      label: Which row
+      placeholder: "Maker and model, e.g. Kia India / EV6"
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Which field
+      placeholder: "e.g. soh_floor_pct"
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say, and why
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Link to the primary document
+      description: An official warranty page, owner manual or warranty booklet published by the manufacturer. Not a news article or a dealer site.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or section, if it is a PDF
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before submitting
+      options:
+        - label: The link above is to a document published by the manufacturer, not to coverage of it
+          required: true

@@ -1,0 +1,2166 @@
+{
+  "dataset": "india-ev-battery-warranty",
+  "version": "1.0.0",
+  "published": "2026-09-23",
+  "licence": "CC BY 4.0",
+  "maintainer": "Voltu",
+  "counts": {
+    "sources": 41,
+    "models": 47,
+    "clauses": 46
+  },
+  "absence_codes": {
+    "NOT_FOUND": "No primary document stating this was located. Where we looked is in the notes.",
+    "NOT_STATED": "The document exists and read, and does not state this.",
+    "NOT_DISCLOSED": "The document sets a threshold but does not describe how it is measured.",
+    "NOT_ADDRESSED": "The document does not contemplate this at all. Used for owner verification and dispute rights.",
+    "NO_FIGURE_IN_DOCUMENT": "The full text was searched and contains no percentage figure of any kind.",
+    "PARTIAL": "Addressed in part only. See notes.",
+    "DISCLOSED": "A measurement method is described in the document."
+  },
+  "sources": [
+    {
+      "source_id": "tata-nexon-om",
+      "maker": "Tata Motors",
+      "document_title": "Tata Nexon.ev owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+    },
+    {
+      "source_id": "tata-harrier-om",
+      "maker": "Tata Motors",
+      "document_title": "Tata Harrier.ev owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/harrier-ev-onwers-manual.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "422pp."
+    },
+    {
+      "source_id": "tata-curvv-om",
+      "maker": "Tata Motors",
+      "document_title": "Tata Curvv.ev owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/curvv-ev/curvv-ev-owners-manual.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "364pp."
+    },
+    {
+      "source_id": "tata-punch-om",
+      "maker": "Tata Motors",
+      "document_title": "Tata Punch.ev owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/punch-ev/april/punch-ev-mce-rev00-07-04-26.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "306pp."
+    },
+    {
+      "source_id": "tata-tiago-om",
+      "maker": "Tata Motors",
+      "document_title": "Tata Tiago.ev owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/tiago-ev/tiago-ev-mce-2.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "250pp."
+    },
+    {
+      "source_id": "tata-sierra-om",
+      "maker": "Tata Motors",
+      "document_title": "Tata Sierra.ev owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/sierra-ev/sierra-ev.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "408pp. Carries the HV Battery Warranty but NOT the DC cycle cap."
+    },
+    {
+      "source_id": "tata-tigor-om",
+      "maker": "Tata Motors",
+      "document_title": "Tata Tigor.ev owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/tigor-ev/tigor-owners-manual.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "261pp. Carries none of the Lifetime HV Battery Warranty apparatus."
+    },
+    {
+      "source_id": "tata-warranty-web",
+      "maker": "Tata Motors",
+      "document_title": "Tata.ev warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://ev.tata.cars/service/warranty.html",
+      "date_read": "2026-09-22",
+      "access_notes": "Publishes no charging condition of any kind."
+    },
+    {
+      "source_id": "mahindra-be6",
+      "maker": "Mahindra",
+      "document_title": "BE 6 Warranty and Service Information Guide",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw2696a5b4/ImportantDocs/BE6_WSIG.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "mahindra-be6fe",
+      "maker": "Mahindra",
+      "document_title": "BE 6 FE Warranty and Service Information Guide",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwadd59319/ImportantDocs/BE6FE_WSIG.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "mahindra-xev9e",
+      "maker": "Mahindra",
+      "document_title": "XEV 9e Warranty and Service Information Guide",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw78109ccd/ImportantDocs/XEV9e_WSIG.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "mahindra-xev9s",
+      "maker": "Mahindra",
+      "document_title": "XEV 9S Warranty and Service Information Guide",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw52810946/ImportantDocs/XEV9S_WSIG.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "mahindra-care",
+      "maker": "Mahindra",
+      "document_title": "Mahindra care and maintenance page",
+      "document_type": "official_warranty_page",
+      "url": "https://auto.mahindra.com/care-and-maintenance.html",
+      "date_read": "2026-09-22",
+      "access_notes": "Whole-vehicle warranty table only. No battery row for XUV400 or XUV 3XO EV."
+    },
+    {
+      "source_id": "mg-zsev",
+      "maker": "JSW MG Motor India",
+      "document_title": "MG ZS EV Service and Warranty Manual, Dec 25",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents//mg-the-all-new-zs-ev-service-and-warranty-manual-dec-25.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "Full text contains no percentage figure of any kind."
+    },
+    {
+      "source_id": "mg-comet",
+      "maker": "JSW MG Motor India",
+      "document_title": "MG Comet EV Service and Warranty Manual, Jan 26",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents/MG%20Comet%20EV%20Service%20and%20Warranty%20Manual%20Jan%2026.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "Full text contains no percentage figure of any kind."
+    },
+    {
+      "source_id": "mg-windsor",
+      "maker": "JSW MG Motor India",
+      "document_title": "MG Windsor EV PMS, Warranty and RSA",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents/windsor-ev-pms-warranty-and-rsa-july-28.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "Full text contains no percentage figure of any kind."
+    },
+    {
+      "source_id": "kia-ev-owners",
+      "maker": "Kia India",
+      "document_title": "Kia India EV owners warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.kia.com/in/service/ev-owners/know-you-kia-ev.html",
+      "date_read": "2026-09-22",
+      "access_notes": "States a capacity warranty for EV6/EV9 with no percentage. 70% appears only for Carens Clavis EV and Syros EV."
+    },
+    {
+      "source_id": "kia-ev6-om",
+      "maker": "Kia India",
+      "document_title": "Kia EV6 owner's manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://www.kia.com/content/dam/kia2/in/en/images/service/service-and-maintenance/owners-manual/New_EV6_Owners_manual.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "605pp. Warranty chapter p590-598; capacity clause p592. No download link is exposed on Kia India's owner's manual page."
+    },
+    {
+      "source_id": "hyundai-warranty",
+      "maker": "Hyundai Motor India",
+      "document_title": "Hyundai India warranty policy page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.hyundai.com/in/en/connect-to-service/warranty-policy",
+      "date_read": "2026-09-22",
+      "access_notes": "States batteries are warranted by their respective manufacturers and not by HMIL. No battery row in the warranty table."
+    },
+    {
+      "source_id": "hyundai-ioniq5-bro",
+      "maker": "Hyundai Motor India",
+      "document_title": "IONIQ 5 e-brochure",
+      "document_type": "brochure_pdf",
+      "url": "https://www.hyundai.com/content/dam/hyundai/in/en/data/brochure/ioniq-5.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "The 8yr/160,000km figure appears only in marketing material."
+    },
+    {
+      "source_id": "hyundai-creta-page",
+      "maker": "Hyundai Motor India",
+      "document_title": "Creta Electric model page",
+      "document_type": "official_model_page",
+      "url": "https://www.hyundai.com/in/en/find-a-car/creta-electric/highlights",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "byd-atto3",
+      "maker": "BYD India",
+      "document_title": "BYD Atto 3 model page warranty table",
+      "document_type": "official_model_page",
+      "url": "https://bydautoindia.com/bydatto3",
+      "date_read": "2026-09-22",
+      "access_notes": "Client-rendered; read in a browser. No standard warranty booklet published."
+    },
+    {
+      "source_id": "citroen-warranty",
+      "maker": "Citroen India",
+      "document_title": "C3, eC3, C3 Aircross and Basalt Maintenance and warranty guide",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://www.citroen.in/content/dam/citroen/india/service/warranty-pdf/Warranty_c3_ec3_aircross_basalt_June.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "38pp. robots.txt disallows PDFs; read in a browser."
+    },
+    {
+      "source_id": "maruti-evitara-pr",
+      "maker": "Maruti Suzuki",
+      "document_title": "e VITARA launch press release",
+      "document_type": "press_release",
+      "url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/february/india-goes-electric-with-maruti-suzuki-e-vitara-introductory-baas-price-starts",
+      "date_read": "2026-09-22",
+      "access_notes": "The only published source for the battery term."
+    },
+    {
+      "source_id": "toyota-warranty",
+      "maker": "Toyota Kirloskar Motor",
+      "document_title": "Toyota India warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.toyotabharat.com/q-service/warranty/",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "mb-eq-warranty",
+      "maker": "Mercedes-Benz India",
+      "document_title": "EQ warranty terms and conditions",
+      "document_type": "official_warranty_page",
+      "url": "https://www.mercedes-benz.co.in/passengercars/services/service-warranty-terms-and-conditions/eq-warranty-terms-and-conditions.html",
+      "date_read": "2026-09-22",
+      "access_notes": "The only India document in the audit that addresses adjudication."
+    },
+    {
+      "source_id": "bmw-warranty",
+      "maker": "BMW India",
+      "document_title": "BMW India warranty policy",
+      "document_type": "official_warranty_page",
+      "url": "https://www.bmw.in/en/topics/owners/warranty-policy.html",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "volvo-warranty",
+      "maker": "Volvo India",
+      "document_title": "Volvo India warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.volvocars.com/in/l/volvo-warranty/",
+      "date_read": "2026-09-22",
+      "access_notes": "Publishes no battery warranty term for India, though Volvo does in other markets."
+    },
+    {
+      "source_id": "ather-warranty",
+      "maker": "Ather Energy",
+      "document_title": "Ather Warranty Policy 2024",
+      "document_type": "warranty_booklet_pdf",
+      "url": "https://media.atherenergy.com/Warranty_Policy_2024.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": "The clearest primary document of any two-wheel maker in the audit."
+    },
+    {
+      "source_id": "ather-faq",
+      "maker": "Ather Energy",
+      "document_title": "Ather battery warranty FAQ",
+      "document_type": "official_warranty_page",
+      "url": "https://www.atherenergy.com/faq/vehicle/ather-battery-warranty",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "ola-tnc",
+      "maker": "Ola Electric",
+      "document_title": "Ola battery warranty terms and conditions",
+      "document_type": "official_warranty_page",
+      "url": "https://www.olaelectric.com/battery-warranty-tnc",
+      "date_read": "2026-09-22",
+      "access_notes": "Ola publishes three different base terms across three of its own pages."
+    },
+    {
+      "source_id": "tvs-iqube-om",
+      "maker": "TVS Motor",
+      "document_title": "TVS iQube owner manual",
+      "document_type": "owner_manual_pdf",
+      "url": "https://www.tvsmotor.com/-/media/Feature/Owners/User-Manual/user-manual-iqube.pdf",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "bajaj-chetak-tc",
+      "maker": "Bajaj Auto",
+      "document_title": "Chetak terms and conditions",
+      "document_type": "official_warranty_page",
+      "url": "https://www.chetak.com/terms-and-conditions",
+      "date_read": "2026-09-22",
+      "access_notes": "Sets a 60% floor in one clause and excludes gradual capacity loss in another."
+    },
+    {
+      "source_id": "vida-warranty",
+      "maker": "Hero MotoCorp",
+      "document_title": "VIDA warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.vidaworld.com/content/experience-fragments/vida/in/en/acpa_mod/topic/_17_warranty_/sub_topic/a--general-instructions-overall-vehicle-about-warranty/master.html",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "ampere-warranty",
+      "maker": "Ampere (Greaves)",
+      "document_title": "Ampere warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://ampere-electric.com/warranty",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "revolt-rv400",
+      "maker": "Revolt Motors",
+      "document_title": "RV400 product page",
+      "document_type": "official_model_page",
+      "url": "https://www.revoltmotors.com/rv400",
+      "date_read": "2026-09-22",
+      "access_notes": "Support pages are disallowed by robots.txt."
+    },
+    {
+      "source_id": "river-warranty",
+      "maker": "River",
+      "document_title": "River extended warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.rideriver.com/care/extendedwarranty",
+      "date_read": "2026-09-22",
+      "access_notes": "The only two-wheel maker in the audit publishing a price for its paid battery extension."
+    },
+    {
+      "source_id": "altigreen-warranty",
+      "maker": "Altigreen",
+      "document_title": "Altigreen vehicle warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.altigreen.com/vehicle-warranty",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "altigreen-tez",
+      "maker": "Altigreen / Exponent",
+      "document_title": "neEV TEZ battery warranty page",
+      "document_type": "official_warranty_page",
+      "url": "https://www.altigreen.com/tez-battery-warranty",
+      "date_read": "2026-09-22",
+      "access_notes": "The only document in the entire audit that discloses a measurement method."
+    },
+    {
+      "source_id": "mahindra-treo",
+      "maker": "Mahindra Last Mile Mobility",
+      "document_title": "Treo product page",
+      "document_type": "official_model_page",
+      "url": "https://mahindralastmilemobility.com/treo",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    },
+    {
+      "source_id": "piaggio-apemax",
+      "maker": "Piaggio",
+      "document_title": "Ape E-City FX Max product page",
+      "document_type": "official_model_page",
+      "url": "https://piaggio-cv.co.in/electric/ape-e-city-fx-max-fixed/",
+      "date_read": "2026-09-22",
+      "access_notes": ""
+    }
+  ],
+  "models": [
+    {
+      "maker": "Tata Motors",
+      "model": "Nexon.ev 45",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "TPEM via IRA.ev telematics",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-nexon-om",
+      "notes": "Second registration onwards: 8 years / 160000 km. Claim restores to steady-state SOH before repair or 80%, whichever is higher.",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Harrier.ev",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "TPEM via IRA.ev telematics",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-harrier-om",
+      "notes": "Second registration onwards: 10 years / 200000 km.",
+      "source": {
+        "source_id": "tata-harrier-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Harrier.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/harrier-ev-onwers-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "422pp."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Curvv.ev",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "TPEM via IRA.ev telematics",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-curvv-om",
+      "notes": "Second registration onwards: 8 years / 160000 km.",
+      "source": {
+        "source_id": "tata-curvv-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Curvv.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/curvv-ev/curvv-ev-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "364pp."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Punch.ev 40",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "TPEM via IRA.ev telematics",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-punch-om",
+      "notes": "Second registration onwards: 8 years / 160000 km.",
+      "source": {
+        "source_id": "tata-punch-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Punch.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/punch-ev/april/punch-ev-mce-rev00-07-04-26.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "306pp."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Tiago.ev 24",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "TPEM via IRA.ev telematics",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-tiago-om",
+      "notes": "Second registration onwards: 8 years / 160000 km.",
+      "source": {
+        "source_id": "tata-tiago-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Tiago.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/tiago-ev/tiago-ev-mce-2.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "250pp."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Sierra.ev",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "TPEM via IRA.ev telematics",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-sierra-om",
+      "notes": "Carries the HV Battery Warranty and the telematics condition but NOT the DC cycle cap present in five other Tata manuals.",
+      "source": {
+        "source_id": "tata-sierra-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Sierra.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/sierra-ev/sierra-ev.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "408pp. Carries the HV Battery Warranty but NOT the DC cycle cap."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Tigor.ev",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-tigor-om",
+      "notes": "Carries none of the Lifetime HV Battery Warranty apparatus. Term survives only in an FAQ.",
+      "source": {
+        "source_id": "tata-tigor-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Tigor.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/tigor-ev/tigor-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "261pp. Carries none of the Lifetime HV Battery Warranty apparatus."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Nexon.ev 30",
+      "segment": "4W",
+      "warranty_years": "NOT_FOUND",
+      "warranty_km": "NOT_FOUND",
+      "soh_floor_pct": "NOT_FOUND",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_FOUND",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-warranty-web",
+      "notes": "Smaller pack. Terms appear on no page found.",
+      "source": {
+        "source_id": "tata-warranty-web",
+        "maker": "Tata Motors",
+        "document_title": "Tata.ev warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://ev.tata.cars/service/warranty.html",
+        "date_read": "2026-09-22",
+        "access_notes": "Publishes no charging condition of any kind."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Tiago.ev 19.2",
+      "segment": "4W",
+      "warranty_years": "NOT_FOUND",
+      "warranty_km": "NOT_FOUND",
+      "soh_floor_pct": "NOT_FOUND",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_FOUND",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-warranty-web",
+      "notes": "Smaller pack. Terms appear on no page found.",
+      "source": {
+        "source_id": "tata-warranty-web",
+        "maker": "Tata Motors",
+        "document_title": "Tata.ev warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://ev.tata.cars/service/warranty.html",
+        "date_read": "2026-09-22",
+        "access_notes": "Publishes no charging condition of any kind."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model": "Punch.ev 35",
+      "segment": "4W",
+      "warranty_years": "NOT_FOUND",
+      "warranty_km": "NOT_FOUND",
+      "soh_floor_pct": "NOT_FOUND",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_FOUND",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tata-warranty-web",
+      "notes": "Smaller pack. Terms appear on no page found.",
+      "source": {
+        "source_id": "tata-warranty-web",
+        "maker": "Tata Motors",
+        "document_title": "Tata.ev warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://ev.tata.cars/service/warranty.html",
+        "date_read": "2026-09-22",
+        "access_notes": "Publishes no charging condition of any kind."
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model": "BE 6",
+      "segment": "4W",
+      "warranty_years": "lifetime_first_reg",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_STATED; Mahindra appoints the inspecting engineer",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mahindra-be6",
+      "notes": "Tiered 85 / 75 / 70. Second registration onwards: 10 years / 200000 km.",
+      "source": {
+        "source_id": "mahindra-be6",
+        "maker": "Mahindra",
+        "document_title": "BE 6 Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw2696a5b4/ImportantDocs/BE6_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model": "BE 6 FE",
+      "segment": "4W",
+      "warranty_years": "lifetime_first_reg",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_STATED; Mahindra appoints the inspecting engineer",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mahindra-be6fe",
+      "notes": "Tiered 85 / 75 / 70.",
+      "source": {
+        "source_id": "mahindra-be6fe",
+        "maker": "Mahindra",
+        "document_title": "BE 6 FE Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dwadd59319/ImportantDocs/BE6FE_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model": "XEV 9e",
+      "segment": "4W",
+      "warranty_years": "lifetime_first_reg",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_STATED; Mahindra appoints the inspecting engineer",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mahindra-xev9e",
+      "notes": "Tiered 85 / 75 / 70.",
+      "source": {
+        "source_id": "mahindra-xev9e",
+        "maker": "Mahindra",
+        "document_title": "XEV 9e Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw78109ccd/ImportantDocs/XEV9e_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model": "XEV 9S",
+      "segment": "4W",
+      "warranty_years": "lifetime_first_reg",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_STATED; Mahindra appoints the inspecting engineer",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mahindra-xev9s",
+      "notes": "Tiered 85 / 75 / 70.",
+      "source": {
+        "source_id": "mahindra-xev9s",
+        "maker": "Mahindra",
+        "document_title": "XEV 9S Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw52810946/ImportantDocs/XEV9S_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model": "XUV400",
+      "segment": "4W",
+      "warranty_years": "NOT_FOUND",
+      "warranty_km": "NOT_FOUND",
+      "soh_floor_pct": "NOT_FOUND",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_FOUND",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mahindra-care",
+      "notes": "No warranty guide published. Owner manual exists as HTML behind a JavaScript portal with no citable URL.",
+      "source": {
+        "source_id": "mahindra-care",
+        "maker": "Mahindra",
+        "document_title": "Mahindra care and maintenance page",
+        "document_type": "official_warranty_page",
+        "url": "https://auto.mahindra.com/care-and-maintenance.html",
+        "date_read": "2026-09-22",
+        "access_notes": "Whole-vehicle warranty table only. No battery row for XUV400 or XUV 3XO EV."
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model": "XUV 3XO EV",
+      "segment": "4W",
+      "warranty_years": "NOT_FOUND",
+      "warranty_km": "NOT_FOUND",
+      "soh_floor_pct": "NOT_FOUND",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_FOUND",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mahindra-care",
+      "notes": "No battery row in the whole-vehicle warranty table.",
+      "source": {
+        "source_id": "mahindra-care",
+        "maker": "Mahindra",
+        "document_title": "Mahindra care and maintenance page",
+        "document_type": "official_warranty_page",
+        "url": "https://auto.mahindra.com/care-and-maintenance.html",
+        "date_read": "2026-09-22",
+        "access_notes": "Whole-vehicle warranty table only. No battery row for XUV400 or XUV 3XO EV."
+      }
+    },
+    {
+      "maker": "JSW MG Motor India",
+      "model": "ZS EV",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "150000",
+      "soh_floor_pct": "NO_FIGURE_IN_DOCUMENT",
+      "who_measures": "Authorised MG EV Dealer",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mg-zsev",
+      "notes": "Commercial use: 3 years / 100000 km. Full manual text contains no percentage of any kind.",
+      "source": {
+        "source_id": "mg-zsev",
+        "maker": "JSW MG Motor India",
+        "document_title": "MG ZS EV Service and Warranty Manual, Dec 25",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents//mg-the-all-new-zs-ev-service-and-warranty-manual-dec-25.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "Full text contains no percentage figure of any kind."
+      }
+    },
+    {
+      "maker": "JSW MG Motor India",
+      "model": "Comet EV",
+      "segment": "4W",
+      "warranty_years": "lifetime_first_owner",
+      "warranty_km": "120000",
+      "soh_floor_pct": "NO_FIGURE_IN_DOCUMENT",
+      "who_measures": "Authorised MG EV Dealer",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mg-comet",
+      "notes": "Lifetime ends on any change of ownership; then 8 years / 120000 km.",
+      "source": {
+        "source_id": "mg-comet",
+        "maker": "JSW MG Motor India",
+        "document_title": "MG Comet EV Service and Warranty Manual, Jan 26",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents/MG%20Comet%20EV%20Service%20and%20Warranty%20Manual%20Jan%2026.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "Full text contains no percentage figure of any kind."
+      }
+    },
+    {
+      "maker": "JSW MG Motor India",
+      "model": "Windsor EV",
+      "segment": "4W",
+      "warranty_years": "lifetime_first_owner",
+      "warranty_km": "160000",
+      "soh_floor_pct": "NO_FIGURE_IN_DOCUMENT",
+      "who_measures": "Authorised MG EV Dealer",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mg-windsor",
+      "notes": "Lifetime ends on any change of ownership; then 8 years / 160000 km.",
+      "source": {
+        "source_id": "mg-windsor",
+        "maker": "JSW MG Motor India",
+        "document_title": "MG Windsor EV PMS, Warranty and RSA",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents/windsor-ev-pms-warranty-and-rsa-july-28.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "Full text contains no percentage figure of any kind."
+      }
+    },
+    {
+      "maker": "Hyundai Motor India",
+      "model": "IONIQ 5",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "hyundai-ioniq5-bro",
+      "notes": "The warranty policy page states batteries are warranted by their manufacturers and not by HMIL, and lists no battery row. The 8yr figure appears only in marketing material.",
+      "source": {
+        "source_id": "hyundai-ioniq5-bro",
+        "maker": "Hyundai Motor India",
+        "document_title": "IONIQ 5 e-brochure",
+        "document_type": "brochure_pdf",
+        "url": "https://www.hyundai.com/content/dam/hyundai/in/en/data/brochure/ioniq-5.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "The 8yr/160,000km figure appears only in marketing material."
+      }
+    },
+    {
+      "maker": "Hyundai Motor India",
+      "model": "Creta Electric",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "hyundai-creta-page",
+      "notes": "Same contradiction as IONIQ 5.",
+      "source": {
+        "source_id": "hyundai-creta-page",
+        "maker": "Hyundai Motor India",
+        "document_title": "Creta Electric model page",
+        "document_type": "official_model_page",
+        "url": "https://www.hyundai.com/in/en/find-a-car/creta-electric/highlights",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model": "EV6",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "kia-ev6-om",
+      "notes": "The 70% floor is in the owner manual (p592), not on Kia India's website, which states a capacity warranty with no threshold. Claim restores to 70%, not 100%.",
+      "source": {
+        "source_id": "kia-ev6-om",
+        "maker": "Kia India",
+        "document_title": "Kia EV6 owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://www.kia.com/content/dam/kia2/in/en/images/service/service-and-maintenance/owners-manual/New_EV6_Owners_manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "605pp. Warranty chapter p590-598; capacity clause p592. No download link is exposed on Kia India's owner's manual page."
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model": "EV9",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "kia-ev6-om",
+      "notes": "Same clause as EV6 on Kia India's page; manual read for EV6.",
+      "source": {
+        "source_id": "kia-ev6-om",
+        "maker": "Kia India",
+        "document_title": "Kia EV6 owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://www.kia.com/content/dam/kia2/in/en/images/service/service-and-maintenance/owners-manual/New_EV6_Owners_manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "605pp. Warranty chapter p590-598; capacity clause p592. No download link is exposed on Kia India's owner's manual page."
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model": "Carens Clavis EV",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "kia-ev-owners",
+      "notes": "Second purchaser: 8 years / 160000 km. Commercial: 8 years / 160000 km.",
+      "source": {
+        "source_id": "kia-ev-owners",
+        "maker": "Kia India",
+        "document_title": "Kia India EV owners warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.kia.com/in/service/ev-owners/know-you-kia-ev.html",
+        "date_read": "2026-09-22",
+        "access_notes": "States a capacity warranty for EV6/EV9 with no percentage. 70% appears only for Carens Clavis EV and Syros EV."
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model": "Syros EV",
+      "segment": "4W",
+      "warranty_years": "lifetime_15",
+      "warranty_km": "unlimited",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "kia-ev-owners",
+      "notes": "Same as Carens Clavis EV.",
+      "source": {
+        "source_id": "kia-ev-owners",
+        "maker": "Kia India",
+        "document_title": "Kia India EV owners warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.kia.com/in/service/ev-owners/know-you-kia-ev.html",
+        "date_read": "2026-09-22",
+        "access_notes": "States a capacity warranty for EV6/EV9 with no percentage. 70% appears only for Carens Clavis EV and Syros EV."
+      }
+    },
+    {
+      "maker": "BYD India",
+      "model": "Atto 3",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "byd-atto3",
+      "notes": "Same terms published for Seal, eMAX 7 and Sealion 7. No standard warranty booklet published.",
+      "source": {
+        "source_id": "byd-atto3",
+        "maker": "BYD India",
+        "document_title": "BYD Atto 3 model page warranty table",
+        "document_type": "official_model_page",
+        "url": "https://bydautoindia.com/bydatto3",
+        "date_read": "2026-09-22",
+        "access_notes": "Client-rendered; read in a browser. No standard warranty booklet published."
+      }
+    },
+    {
+      "maker": "Citroen India",
+      "model": "eC3 personal",
+      "segment": "4W",
+      "warranty_years": "7",
+      "warranty_km": "140000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "citroen-warranty",
+      "notes": "The public web page lists only the vehicle warranty and omits the separate longer battery term, understating cover by four years.",
+      "source": {
+        "source_id": "citroen-warranty",
+        "maker": "Citroen India",
+        "document_title": "C3, eC3, C3 Aircross and Basalt Maintenance and warranty guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.citroen.in/content/dam/citroen/india/service/warranty-pdf/Warranty_c3_ec3_aircross_basalt_June.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "38pp. robots.txt disallows PDFs; read in a browser."
+      }
+    },
+    {
+      "maker": "Citroen India",
+      "model": "eC3 commercial",
+      "segment": "4W",
+      "warranty_years": "3",
+      "warranty_km": "125000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "citroen-warranty",
+      "notes": "Gradual capacity loss excluded beyond limits that the 38-page booklet never specifies.",
+      "source": {
+        "source_id": "citroen-warranty",
+        "maker": "Citroen India",
+        "document_title": "C3, eC3, C3 Aircross and Basalt Maintenance and warranty guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.citroen.in/content/dam/citroen/india/service/warranty-pdf/Warranty_c3_ec3_aircross_basalt_June.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "38pp. robots.txt disallows PDFs; read in a browser."
+      }
+    },
+    {
+      "maker": "Maruti Suzuki",
+      "model": "e VITARA",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "maruti-evitara-pr",
+      "notes": "Published only in a press release. No owner manual or warranty booklet found online.",
+      "source": {
+        "source_id": "maruti-evitara-pr",
+        "maker": "Maruti Suzuki",
+        "document_title": "e VITARA launch press release",
+        "document_type": "press_release",
+        "url": "https://www.marutisuzuki.com/corporate/media/press-releases/2026/february/india-goes-electric-with-maruti-suzuki-e-vitara-introductory-baas-price-starts",
+        "date_read": "2026-09-22",
+        "access_notes": "The only published source for the battery term."
+      }
+    },
+    {
+      "maker": "Toyota Kirloskar Motor",
+      "model": "BEV range",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "200000",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "toyota-warranty",
+      "notes": "Taxi, fleet and commercial use drops to 3 years / 100000 km; the document does not say whether the 70% condition survives into that term.",
+      "source": {
+        "source_id": "toyota-warranty",
+        "maker": "Toyota Kirloskar Motor",
+        "document_title": "Toyota India warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.toyotabharat.com/q-service/warranty/",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mercedes-Benz India",
+      "model": "EQA / EQB / EQC / EQG",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "70",
+      "who_measures": "MB India authorised dealers",
+      "method_disclosed": "PARTIAL",
+      "owner_can_dispute": "PARTIAL",
+      "source_id": "mb-eq-warranty",
+      "notes": "Rated capacity recorded at production and printed on a label on the pack, obtainable from any authorised dealer. The only maker where an owner can learn the denominator. Jurisdiction fixed at Pune.",
+      "source": {
+        "source_id": "mb-eq-warranty",
+        "maker": "Mercedes-Benz India",
+        "document_title": "EQ warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.mercedes-benz.co.in/passengercars/services/service-warranty-terms-and-conditions/eq-warranty-terms-and-conditions.html",
+        "date_read": "2026-09-22",
+        "access_notes": "The only India document in the audit that addresses adjudication."
+      }
+    },
+    {
+      "maker": "BMW India",
+      "model": "BEV range",
+      "segment": "4W",
+      "warranty_years": "8",
+      "warranty_km": "160000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "bmw-warranty",
+      "notes": "",
+      "source": {
+        "source_id": "bmw-warranty",
+        "maker": "BMW India",
+        "document_title": "BMW India warranty policy",
+        "document_type": "official_warranty_page",
+        "url": "https://www.bmw.in/en/topics/owners/warranty-policy.html",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Volvo India",
+      "model": "BEV range",
+      "segment": "4W",
+      "warranty_years": "NOT_FOUND",
+      "warranty_km": "NOT_FOUND",
+      "soh_floor_pct": "NOT_FOUND",
+      "who_measures": "NOT_FOUND",
+      "method_disclosed": "NOT_FOUND",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "volvo-warranty",
+      "notes": "Publishes no battery warranty term for India, though Volvo publishes one in other markets.",
+      "source": {
+        "source_id": "volvo-warranty",
+        "maker": "Volvo India",
+        "document_title": "Volvo India warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.volvocars.com/in/l/volvo-warranty/",
+        "date_read": "2026-09-22",
+        "access_notes": "Publishes no battery warranty term for India, though Volvo does in other markets."
+      }
+    },
+    {
+      "maker": "Ather Energy",
+      "model": "450X / 450S / Rizta",
+      "segment": "2W",
+      "warranty_years": "3",
+      "warranty_km": "30000",
+      "soh_floor_pct": "70",
+      "who_measures": "Ather, by its own standard testing procedure",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "ather-warranty",
+      "notes": "The document names the procedure and never describes it.",
+      "source": {
+        "source_id": "ather-warranty",
+        "maker": "Ather Energy",
+        "document_title": "Ather Warranty Policy 2024",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://media.atherenergy.com/Warranty_Policy_2024.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "The clearest primary document of any two-wheel maker in the audit."
+      }
+    },
+    {
+      "maker": "Ather Energy",
+      "model": "450 Apex",
+      "segment": "2W",
+      "warranty_years": "5",
+      "warranty_km": "60000",
+      "soh_floor_pct": "70",
+      "who_measures": "Ather",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "ather-warranty",
+      "notes": "",
+      "source": {
+        "source_id": "ather-warranty",
+        "maker": "Ather Energy",
+        "document_title": "Ather Warranty Policy 2024",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://media.atherenergy.com/Warranty_Policy_2024.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "The clearest primary document of any two-wheel maker in the audit."
+      }
+    },
+    {
+      "maker": "Ather Energy",
+      "model": "Eight70 paid extension",
+      "segment": "2W",
+      "warranty_years": "8",
+      "warranty_km": "80000",
+      "soh_floor_pct": "70",
+      "who_measures": "Ather support, only after 10000 km",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "ather-faq",
+      "notes": "",
+      "source": {
+        "source_id": "ather-faq",
+        "maker": "Ather Energy",
+        "document_title": "Ather battery warranty FAQ",
+        "document_type": "official_warranty_page",
+        "url": "https://www.atherenergy.com/faq/vehicle/ather-battery-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Ola Electric",
+      "model": "S1 range",
+      "segment": "2W",
+      "warranty_years": "3",
+      "warranty_km": "50000",
+      "soh_floor_pct": "70",
+      "who_measures": "The company only, after 10000 km",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "ola-tnc",
+      "notes": "Ola publishes three different base terms across three of its own pages. The paid top-up plan excludes commercial and fleet customers.",
+      "source": {
+        "source_id": "ola-tnc",
+        "maker": "Ola Electric",
+        "document_title": "Ola battery warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.olaelectric.com/battery-warranty-tnc",
+        "date_read": "2026-09-22",
+        "access_notes": "Ola publishes three different base terms across three of its own pages."
+      }
+    },
+    {
+      "maker": "TVS Motor",
+      "model": "iQube",
+      "segment": "2W",
+      "warranty_years": "3",
+      "warranty_km": "50000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "The Company",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "tvs-iqube-om",
+      "notes": "",
+      "source": {
+        "source_id": "tvs-iqube-om",
+        "maker": "TVS Motor",
+        "document_title": "TVS iQube owner manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://www.tvsmotor.com/-/media/Feature/Owners/User-Manual/user-manual-iqube.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Bajaj Auto",
+      "model": "Chetak",
+      "segment": "2W",
+      "warranty_years": "3",
+      "warranty_km": "50000",
+      "soh_floor_pct": "60",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "bajaj-chetak-tc",
+      "notes": "One clause sets a 60% floor; another excludes gradual capacity loss as wear on a consumable.",
+      "source": {
+        "source_id": "bajaj-chetak-tc",
+        "maker": "Bajaj Auto",
+        "document_title": "Chetak terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.chetak.com/terms-and-conditions",
+        "date_read": "2026-09-22",
+        "access_notes": "Sets a 60% floor in one clause and excludes gradual capacity loss in another."
+      }
+    },
+    {
+      "maker": "Hero MotoCorp",
+      "model": "VIDA V1 / VX2",
+      "segment": "2W",
+      "warranty_years": "3",
+      "warranty_km": "30000",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "vida-warranty",
+      "notes": "",
+      "source": {
+        "source_id": "vida-warranty",
+        "maker": "Hero MotoCorp",
+        "document_title": "VIDA warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.vidaworld.com/content/experience-fragments/vida/in/en/acpa_mod/topic/_17_warranty_/sub_topic/a--general-instructions-overall-vehicle-about-warranty/master.html",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Ampere (Greaves)",
+      "model": "Nexus / Magnus Neo / Magnus Grand",
+      "segment": "2W",
+      "warranty_years": "5",
+      "warranty_km": "75000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "Ampere, solely",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "ampere-warranty",
+      "notes": "Sold from 1 Jul 2025.",
+      "source": {
+        "source_id": "ampere-warranty",
+        "maker": "Ampere (Greaves)",
+        "document_title": "Ampere warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://ampere-electric.com/warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Revolt Motors",
+      "model": "RV400",
+      "segment": "2W",
+      "warranty_years": "8",
+      "warranty_km": "80000",
+      "soh_floor_pct": "70",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "revolt-rv400",
+      "notes": "Support pages disallowed by robots.txt, so exclusions could not be read.",
+      "source": {
+        "source_id": "revolt-rv400",
+        "maker": "Revolt Motors",
+        "document_title": "RV400 product page",
+        "document_type": "official_model_page",
+        "url": "https://www.revoltmotors.com/rv400",
+        "date_read": "2026-09-22",
+        "access_notes": "Support pages are disallowed by robots.txt."
+      }
+    },
+    {
+      "maker": "River",
+      "model": "Indie",
+      "segment": "2W",
+      "warranty_years": "3",
+      "warranty_km": "30000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "river-warranty",
+      "notes": "Paid extensions to 5yr/50000km and 8yr/80000km, priced at Rs 4999 and Rs 8399 plus GST.",
+      "source": {
+        "source_id": "river-warranty",
+        "maker": "River",
+        "document_title": "River extended warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.rideriver.com/care/extendedwarranty",
+        "date_read": "2026-09-22",
+        "access_notes": "The only two-wheel maker in the audit publishing a price for its paid battery extension."
+      }
+    },
+    {
+      "maker": "Mahindra Last Mile Mobility",
+      "model": "Treo",
+      "segment": "3W",
+      "warranty_years": "5",
+      "warranty_km": "120000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "mahindra-treo",
+      "notes": "",
+      "source": {
+        "source_id": "mahindra-treo",
+        "maker": "Mahindra Last Mile Mobility",
+        "document_title": "Treo product page",
+        "document_type": "official_model_page",
+        "url": "https://mahindralastmilemobility.com/treo",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Piaggio",
+      "model": "Ape E-City FX Max",
+      "segment": "3W",
+      "warranty_years": "5",
+      "warranty_km": "200000",
+      "soh_floor_pct": "NOT_STATED",
+      "who_measures": "NOT_STATED",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "piaggio-apemax",
+      "notes": "",
+      "source": {
+        "source_id": "piaggio-apemax",
+        "maker": "Piaggio",
+        "document_title": "Ape E-City FX Max product page",
+        "document_type": "official_model_page",
+        "url": "https://piaggio-cv.co.in/electric/ape-e-city-fx-max-fixed/",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Altigreen",
+      "model": "neEV",
+      "segment": "3W",
+      "warranty_years": "3",
+      "warranty_km": "100000",
+      "soh_floor_pct": "70",
+      "who_measures": "ALTIGREEN",
+      "method_disclosed": "NOT_DISCLOSED",
+      "owner_can_dispute": "NOT_ADDRESSED",
+      "source_id": "altigreen-warranty",
+      "notes": "",
+      "source": {
+        "source_id": "altigreen-warranty",
+        "maker": "Altigreen",
+        "document_title": "Altigreen vehicle warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.altigreen.com/vehicle-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Altigreen / Exponent",
+      "model": "neEV TEZ",
+      "segment": "3W",
+      "warranty_years": "3",
+      "warranty_km": "cycles_3000",
+      "soh_floor_pct": "70",
+      "who_measures": "Exponent, in its sole discretion",
+      "method_disclosed": "DISCLOSED",
+      "owner_can_dispute": "PARTIAL",
+      "source_id": "altigreen-tez",
+      "notes": "The ONLY row in this dataset with a disclosed measurement method: capacity measured on a CC-CV profile at 54A. Warranted by cycles, not km: 3000 cycles to 70% of usable capacity. Technical report to the customer within 7 days.",
+      "source": {
+        "source_id": "altigreen-tez",
+        "maker": "Altigreen / Exponent",
+        "document_title": "neEV TEZ battery warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.altigreen.com/tez-battery-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": "The only document in the entire audit that discloses a measurement method."
+      }
+    }
+  ],
+  "clauses": [
+    {
+      "maker": "Tata Motors",
+      "model_scope": "Nexon.ev, Harrier.ev, Curvv.ev, Punch.ev, Tiago.ev (5 of 7 manuals; NOT Sierra.ev, NOT Tigor.ev)",
+      "clause_type": "dc_charging_cap",
+      "clause_text": "after a maximum of four DC / opportunity charging cycles, you must use AC charging to 100% State of Charge for the optimum performance of the high voltage battery pack.",
+      "source_id": "tata-nexon-om",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model_scope": "Nexon.ev, Harrier.ev, Curvv.ev (3 of 7 manuals)",
+      "clause_type": "charging_pattern_warnings",
+      "clause_text": "Vehicle shall not have more than 2 warnings related to EV charging pattern between two service intervals.",
+      "source_id": "tata-nexon-om",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model_scope": "All Tata EV manuals except Tigor.ev (6 of 7)",
+      "clause_type": "telematics_required",
+      "clause_text": "IRA.ev subscription maintenance is crucial for telemetry data to be transferred back to TPEM to allow visibility of the last steady state of the HV Battery for application of the HV Battery Warranty.",
+      "source_id": "tata-nexon-om",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model_scope": "Nexon.ev",
+      "clause_type": "charging_exclusion",
+      "clause_text": "The vehicle / HV battery is subjected to any form of unusual stress, including stress due to improper charging racing; overloading; or other misuse; abuse; or negligent use",
+      "source_id": "tata-nexon-om",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model_scope": "Nexon.ev",
+      "clause_type": "who_decides",
+      "clause_text": "to be decided at sole discretion of Tata Passenger Electric Mobility Limited",
+      "source_id": "tata-nexon-om",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model_scope": "Nexon.ev",
+      "clause_type": "claim_restores_to",
+      "clause_text": "at a value equal to steady state SOH before battery repair / replacement or at 80% SOH, whichever is higher",
+      "source_id": "tata-nexon-om",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Tata Motors",
+      "model_scope": "All lifetime models",
+      "clause_type": "ownership_transfer",
+      "clause_text": "It is incumbent on every second (or subsequent) owner to inform TATA MOTORS PASSENGER ELECTRIC MOBILITY LIMITED of the vehicle ownership transfer for HV Battery Warranty to apply.",
+      "source_id": "tata-nexon-om",
+      "source": {
+        "source_id": "tata-nexon-om",
+        "maker": "Tata Motors",
+        "document_title": "Tata Nexon.ev owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://ev.tata.cars/content/dam/tml/ev/pdf/owners-manual/nexon-ev/nexon-ev-new-owners-manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "336pp. Warranty section p325-336, HV Battery Warranty from p331. Disallowed to automated retrieval by robots.txt; read in a browser."
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model_scope": "BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Defect or damage caused due to: (i) damaged or non-certified charger, or (ii) continuing use of charger after noticing any fault, or (iii) charger exposure to extreme weather conditions, or (iv) opening, tampering or modification of the internal components of the charger, or (v) failure to follow Mahindra's instructions / guidelines with respect to proper charging and charger installation.",
+      "source_id": "mahindra-be6",
+      "source": {
+        "source_id": "mahindra-be6",
+        "maker": "Mahindra",
+        "document_title": "BE 6 Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw2696a5b4/ImportantDocs/BE6_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model_scope": "BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Any electricity surge or electricity dip or any fluctuation while charging the vehicle.",
+      "source_id": "mahindra-be6",
+      "source": {
+        "source_id": "mahindra-be6",
+        "maker": "Mahindra",
+        "document_title": "BE 6 Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw2696a5b4/ImportantDocs/BE6_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model_scope": "BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",
+      "clause_type": "who_decides",
+      "clause_text": "Mahindra reserves the right to appoint its own engineer or an independent consultant engineer to inspect the vehicle prior to determine whether any repair or replacement of the part(s) covered, is required.",
+      "source_id": "mahindra-be6",
+      "source": {
+        "source_id": "mahindra-be6",
+        "maker": "Mahindra",
+        "document_title": "BE 6 Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw2696a5b4/ImportantDocs/BE6_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mahindra",
+      "model_scope": "BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",
+      "clause_type": "service_condition",
+      "clause_text": "Battery is not serviced at a Mahindra Authorised Dealer or by a Mahindra Authorised Service Center during regular maintenance and service as recommended",
+      "source_id": "mahindra-be6",
+      "source": {
+        "source_id": "mahindra-be6",
+        "maker": "Mahindra",
+        "document_title": "BE 6 Warranty and Service Information Guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.mahindraelectricsuv.com/on/demandware.static/-/Library-Sites-eSUVSharedLibrary/default/dw2696a5b4/ImportantDocs/BE6_WSIG.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "JSW MG Motor India",
+      "model_scope": "ZS EV, Comet EV, Windsor EV (all 3 manuals)",
+      "clause_type": "coverage_trigger",
+      "clause_text": "During a capacity check at an Authorised MG EV Dealer if it is determined that battery pack has suffered a capacity drop below acceptable degradation according to the use and ageing of the vehicle, the module below this acceptable degradation will be deemed excessive loss.",
+      "source_id": "mg-zsev",
+      "source": {
+        "source_id": "mg-zsev",
+        "maker": "JSW MG Motor India",
+        "document_title": "MG ZS EV Service and Warranty Manual, Dec 25",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents//mg-the-all-new-zs-ev-service-and-warranty-manual-dec-25.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "Full text contains no percentage figure of any kind."
+      }
+    },
+    {
+      "maker": "JSW MG Motor India",
+      "model_scope": "ZS EV, Comet EV, Windsor EV (all 3 manuals)",
+      "clause_type": "coverage_exclusion",
+      "clause_text": "If the degree of degradation of the high-voltage battery is within the normal aging level",
+      "source_id": "mg-zsev",
+      "source": {
+        "source_id": "mg-zsev",
+        "maker": "JSW MG Motor India",
+        "document_title": "MG ZS EV Service and Warranty Manual, Dec 25",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents//mg-the-all-new-zs-ev-service-and-warranty-manual-dec-25.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "Full text contains no percentage figure of any kind."
+      }
+    },
+    {
+      "maker": "JSW MG Motor India",
+      "model_scope": "ZS EV, Comet EV, Windsor EV (all 3 manuals)",
+      "clause_type": "who_decides",
+      "clause_text": "JSW MG MOTOR's decision is final and binding on the Owner of the vehicle in all warranty matters.",
+      "source_id": "mg-zsev",
+      "source": {
+        "source_id": "mg-zsev",
+        "maker": "JSW MG Motor India",
+        "document_title": "MG ZS EV Service and Warranty Manual, Dec 25",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents//mg-the-all-new-zs-ev-service-and-warranty-manual-dec-25.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "Full text contains no percentage figure of any kind."
+      }
+    },
+    {
+      "maker": "JSW MG Motor India",
+      "model_scope": "ZS EV, Comet EV, Windsor EV (all 3 manuals)",
+      "clause_type": "charging_exclusion",
+      "clause_text": "2.6.2 Use of improper battery charger, fluids or lubricants.",
+      "source_id": "mg-zsev",
+      "source": {
+        "source_id": "mg-zsev",
+        "maker": "JSW MG Motor India",
+        "document_title": "MG ZS EV Service and Warranty Manual, Dec 25",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://s7ap1.scene7.com/is/content/mgmotor/mgmotor/documents//mg-the-all-new-zs-ev-service-and-warranty-manual-dec-25.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "Full text contains no percentage figure of any kind."
+      }
+    },
+    {
+      "maker": "Hyundai Motor India",
+      "model_scope": "All",
+      "clause_type": "battery_disclaimer",
+      "clause_text": "Air Purifier, Batteries, Tyres & Tubes, or any external accessory originally equipped on Hyundai vehicles are warranted directly by the respective manufacturers and not by HMIL.",
+      "source_id": "hyundai-warranty",
+      "source": {
+        "source_id": "hyundai-warranty",
+        "maker": "Hyundai Motor India",
+        "document_title": "Hyundai India warranty policy page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.hyundai.com/in/en/connect-to-service/warranty-policy",
+        "date_read": "2026-09-22",
+        "access_notes": "States batteries are warranted by their respective manufacturers and not by HMIL. No battery row in the warranty table."
+      }
+    },
+    {
+      "maker": "Hyundai Motor India",
+      "model_scope": "All",
+      "clause_type": "who_decides",
+      "clause_text": "HMIL's decision is final and binding on the Owner of the vehicle in all warranty matters.",
+      "source_id": "hyundai-warranty",
+      "source": {
+        "source_id": "hyundai-warranty",
+        "maker": "Hyundai Motor India",
+        "document_title": "Hyundai India warranty policy page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.hyundai.com/in/en/connect-to-service/warranty-policy",
+        "date_read": "2026-09-22",
+        "access_notes": "States batteries are warranted by their respective manufacturers and not by HMIL. No battery row in the warranty table."
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model_scope": "All EV models",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Defects or damage resulting from the use of damaged, non-certified charger; continued use of a faulty charger; exposure of the charger to extreme weather; voltage fluctuation; opening or tampering with charger components; installation of charging infrastructure by an unauthorized electrician/ technician; or failure to follow the charging instructions provided by Kia India",
+      "source_id": "kia-ev-owners",
+      "source": {
+        "source_id": "kia-ev-owners",
+        "maker": "Kia India",
+        "document_title": "Kia India EV owners warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.kia.com/in/service/ev-owners/know-you-kia-ev.html",
+        "date_read": "2026-09-22",
+        "access_notes": "States a capacity warranty for EV6/EV9 with no percentage. 70% appears only for Carens Clavis EV and Syros EV."
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model_scope": "EV6, EV9",
+      "clause_type": "coverage_trigger",
+      "clause_text": "for capacity loss below 70% of the original high voltage battery capacity",
+      "source_id": "kia-ev6-om",
+      "source": {
+        "source_id": "kia-ev6-om",
+        "maker": "Kia India",
+        "document_title": "Kia EV6 owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://www.kia.com/content/dam/kia2/in/en/images/service/service-and-maintenance/owners-manual/New_EV6_Owners_manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "605pp. Warranty chapter p590-598; capacity clause p592. No download link is exposed on Kia India's owner's manual page."
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model_scope": "EV6, EV9",
+      "clause_type": "claim_restores_to",
+      "clause_text": "it will provide the vehicle with a high voltage battery capacity of at least 70% of the original battery capacity",
+      "source_id": "kia-ev6-om",
+      "source": {
+        "source_id": "kia-ev6-om",
+        "maker": "Kia India",
+        "document_title": "Kia EV6 owner's manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://www.kia.com/content/dam/kia2/in/en/images/service/service-and-maintenance/owners-manual/New_EV6_Owners_manual.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "605pp. Warranty chapter p590-598; capacity clause p592. No download link is exposed on Kia India's owner's manual page."
+      }
+    },
+    {
+      "maker": "Kia India",
+      "model_scope": "All EV models",
+      "clause_type": "who_decides",
+      "clause_text": "KIN reserves the right for the final decision in all warranty matters",
+      "source_id": "kia-ev-owners",
+      "source": {
+        "source_id": "kia-ev-owners",
+        "maker": "Kia India",
+        "document_title": "Kia India EV owners warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.kia.com/in/service/ev-owners/know-you-kia-ev.html",
+        "date_read": "2026-09-22",
+        "access_notes": "States a capacity warranty for EV6/EV9 with no percentage. 70% appears only for Carens Clavis EV and Syros EV."
+      }
+    },
+    {
+      "maker": "Citroen India",
+      "model_scope": "eC3",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Neglecting to follow correct charging procedures.",
+      "source_id": "citroen-warranty",
+      "source": {
+        "source_id": "citroen-warranty",
+        "maker": "Citroen India",
+        "document_title": "C3, eC3, C3 Aircross and Basalt Maintenance and warranty guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.citroen.in/content/dam/citroen/india/service/warranty-pdf/Warranty_c3_ec3_aircross_basalt_June.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "38pp. robots.txt disallows PDFs; read in a browser."
+      }
+    },
+    {
+      "maker": "Citroen India",
+      "model_scope": "eC3",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Use of incompatible charging devices.",
+      "source_id": "citroen-warranty",
+      "source": {
+        "source_id": "citroen-warranty",
+        "maker": "Citroen India",
+        "document_title": "C3, eC3, C3 Aircross and Basalt Maintenance and warranty guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.citroen.in/content/dam/citroen/india/service/warranty-pdf/Warranty_c3_ec3_aircross_basalt_June.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "38pp. robots.txt disallows PDFs; read in a browser."
+      }
+    },
+    {
+      "maker": "Citroen India",
+      "model_scope": "eC3",
+      "clause_type": "coverage_exclusion",
+      "clause_text": "Loss of battery capacity due to or resulting from gradual capacity loss is NOT covered under warranty beyond the terms and limits specified.",
+      "source_id": "citroen-warranty",
+      "source": {
+        "source_id": "citroen-warranty",
+        "maker": "Citroen India",
+        "document_title": "C3, eC3, C3 Aircross and Basalt Maintenance and warranty guide",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://www.citroen.in/content/dam/citroen/india/service/warranty-pdf/Warranty_c3_ec3_aircross_basalt_June.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "38pp. robots.txt disallows PDFs; read in a browser."
+      }
+    },
+    {
+      "maker": "Toyota Kirloskar Motor",
+      "model_scope": "BEV range",
+      "clause_type": "coverage_trigger",
+      "clause_text": "HV Battery for BEV - Minimum 70% of Battery capacity throughout the Warranty Period.",
+      "source_id": "toyota-warranty",
+      "source": {
+        "source_id": "toyota-warranty",
+        "maker": "Toyota Kirloskar Motor",
+        "document_title": "Toyota India warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.toyotabharat.com/q-service/warranty/",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Mercedes-Benz India",
+      "model_scope": "EQ range",
+      "clause_type": "charging_exclusion",
+      "clause_text": "chargers that do not meet MB technical specifications as mentioned in Owners manual",
+      "source_id": "mb-eq-warranty",
+      "source": {
+        "source_id": "mb-eq-warranty",
+        "maker": "Mercedes-Benz India",
+        "document_title": "EQ warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.mercedes-benz.co.in/passengercars/services/service-warranty-terms-and-conditions/eq-warranty-terms-and-conditions.html",
+        "date_read": "2026-09-22",
+        "access_notes": "The only India document in the audit that addresses adjudication."
+      }
+    },
+    {
+      "maker": "Mercedes-Benz India",
+      "model_scope": "EQ range",
+      "clause_type": "storage_condition",
+      "clause_text": "The high-voltage battery must be charged at the latest, within 14 days after the state of charge for the high-voltage battery has reached zero",
+      "source_id": "mb-eq-warranty",
+      "source": {
+        "source_id": "mb-eq-warranty",
+        "maker": "Mercedes-Benz India",
+        "document_title": "EQ warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.mercedes-benz.co.in/passengercars/services/service-warranty-terms-and-conditions/eq-warranty-terms-and-conditions.html",
+        "date_read": "2026-09-22",
+        "access_notes": "The only India document in the audit that addresses adjudication."
+      }
+    },
+    {
+      "maker": "Mercedes-Benz India",
+      "model_scope": "EQ range",
+      "clause_type": "baseline_disclosed",
+      "clause_text": "The rated capacity of the high-voltage battery at delivery is recorded during vehicle production and documented by the manufacture... The rated capacity documented for the high-voltage battery at delivery is also specified on the label affixed to the high-voltage battery.",
+      "source_id": "mb-eq-warranty",
+      "source": {
+        "source_id": "mb-eq-warranty",
+        "maker": "Mercedes-Benz India",
+        "document_title": "EQ warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.mercedes-benz.co.in/passengercars/services/service-warranty-terms-and-conditions/eq-warranty-terms-and-conditions.html",
+        "date_read": "2026-09-22",
+        "access_notes": "The only India document in the audit that addresses adjudication."
+      }
+    },
+    {
+      "maker": "Mercedes-Benz India",
+      "model_scope": "EQ range",
+      "clause_type": "jurisdiction",
+      "clause_text": "The Courts at Pune, Maharashtra shall have exclusive jurisdiction to decide any dispute/ claim arising under this Battery Certificate.",
+      "source_id": "mb-eq-warranty",
+      "source": {
+        "source_id": "mb-eq-warranty",
+        "maker": "Mercedes-Benz India",
+        "document_title": "EQ warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.mercedes-benz.co.in/passengercars/services/service-warranty-terms-and-conditions/eq-warranty-terms-and-conditions.html",
+        "date_read": "2026-09-22",
+        "access_notes": "The only India document in the audit that addresses adjudication."
+      }
+    },
+    {
+      "maker": "Ather Energy",
+      "model_scope": "450X, 450S, Rizta, 450 Apex",
+      "clause_type": "coverage_trigger",
+      "clause_text": "shall not degrade beyond 30% of the published nominal capacity",
+      "source_id": "ather-warranty",
+      "source": {
+        "source_id": "ather-warranty",
+        "maker": "Ather Energy",
+        "document_title": "Ather Warranty Policy 2024",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://media.atherenergy.com/Warranty_Policy_2024.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "The clearest primary document of any two-wheel maker in the audit."
+      }
+    },
+    {
+      "maker": "Ather Energy",
+      "model_scope": "450X, 450S, Rizta, 450 Apex",
+      "clause_type": "charging_condition",
+      "clause_text": "charging the Battery only using charger provided by the Ather",
+      "source_id": "ather-warranty",
+      "source": {
+        "source_id": "ather-warranty",
+        "maker": "Ather Energy",
+        "document_title": "Ather Warranty Policy 2024",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://media.atherenergy.com/Warranty_Policy_2024.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "The clearest primary document of any two-wheel maker in the audit."
+      }
+    },
+    {
+      "maker": "Ather Energy",
+      "model_scope": "450X, 450S, Rizta, 450 Apex",
+      "clause_type": "who_decides",
+      "clause_text": "as measured by Ather's standard testing procedure",
+      "source_id": "ather-warranty",
+      "source": {
+        "source_id": "ather-warranty",
+        "maker": "Ather Energy",
+        "document_title": "Ather Warranty Policy 2024",
+        "document_type": "warranty_booklet_pdf",
+        "url": "https://media.atherenergy.com/Warranty_Policy_2024.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": "The clearest primary document of any two-wheel maker in the audit."
+      }
+    },
+    {
+      "maker": "Ola Electric",
+      "model_scope": "S1 range",
+      "clause_type": "commercial_exclusion",
+      "clause_text": "Ola Electric Battery Top-up Warranty Plan is applicable for to all retail customers only, not applicable to commercial and fleet customers",
+      "source_id": "ola-tnc",
+      "source": {
+        "source_id": "ola-tnc",
+        "maker": "Ola Electric",
+        "document_title": "Ola battery warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.olaelectric.com/battery-warranty-tnc",
+        "date_read": "2026-09-22",
+        "access_notes": "Ola publishes three different base terms across three of its own pages."
+      }
+    },
+    {
+      "maker": "Ola Electric",
+      "model_scope": "S1 range",
+      "clause_type": "who_decides",
+      "clause_text": "Battery Health certification will be done by the company only after the scooter has been driven for more than 10,000 kms",
+      "source_id": "ola-tnc",
+      "source": {
+        "source_id": "ola-tnc",
+        "maker": "Ola Electric",
+        "document_title": "Ola battery warranty terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.olaelectric.com/battery-warranty-tnc",
+        "date_read": "2026-09-22",
+        "access_notes": "Ola publishes three different base terms across three of its own pages."
+      }
+    },
+    {
+      "maker": "TVS Motor",
+      "model_scope": "iQube",
+      "clause_type": "who_decides",
+      "clause_text": "the Company's decision either to repair or replace the affected parts will be final.",
+      "source_id": "tvs-iqube-om",
+      "source": {
+        "source_id": "tvs-iqube-om",
+        "maker": "TVS Motor",
+        "document_title": "TVS iQube owner manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://www.tvsmotor.com/-/media/Feature/Owners/User-Manual/user-manual-iqube.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "TVS Motor",
+      "model_scope": "iQube",
+      "clause_type": "charging_condition",
+      "clause_text": "Charge the batteries only using provided charger",
+      "source_id": "tvs-iqube-om",
+      "source": {
+        "source_id": "tvs-iqube-om",
+        "maker": "TVS Motor",
+        "document_title": "TVS iQube owner manual",
+        "document_type": "owner_manual_pdf",
+        "url": "https://www.tvsmotor.com/-/media/Feature/Owners/User-Manual/user-manual-iqube.pdf",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Bajaj Auto",
+      "model_scope": "Chetak",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Any failure arising due to use of non-recommended battery charger",
+      "source_id": "bajaj-chetak-tc",
+      "source": {
+        "source_id": "bajaj-chetak-tc",
+        "maker": "Bajaj Auto",
+        "document_title": "Chetak terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.chetak.com/terms-and-conditions",
+        "date_read": "2026-09-22",
+        "access_notes": "Sets a 60% floor in one clause and excludes gradual capacity loss in another."
+      }
+    },
+    {
+      "maker": "Bajaj Auto",
+      "model_scope": "Chetak",
+      "clause_type": "charging_exclusion",
+      "clause_text": "any damage to the Chetak or the provided equipment due to voltage above 250V rms or malfunction or earthing related issues or any other electrical related issues at charging place",
+      "source_id": "bajaj-chetak-tc",
+      "source": {
+        "source_id": "bajaj-chetak-tc",
+        "maker": "Bajaj Auto",
+        "document_title": "Chetak terms and conditions",
+        "document_type": "official_warranty_page",
+        "url": "https://www.chetak.com/terms-and-conditions",
+        "date_read": "2026-09-22",
+        "access_notes": "Sets a 60% floor in one clause and excludes gradual capacity loss in another."
+      }
+    },
+    {
+      "maker": "Ampere (Greaves)",
+      "model_scope": "All",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Charging the batteries with other brand chargers/non-recommended chargers",
+      "source_id": "ampere-warranty",
+      "source": {
+        "source_id": "ampere-warranty",
+        "maker": "Ampere (Greaves)",
+        "document_title": "Ampere warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://ampere-electric.com/warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Ampere (Greaves)",
+      "model_scope": "All",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Using unauthorized charging profiles and fast charging options",
+      "source_id": "ampere-warranty",
+      "source": {
+        "source_id": "ampere-warranty",
+        "maker": "Ampere (Greaves)",
+        "document_title": "Ampere warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://ampere-electric.com/warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Ampere (Greaves)",
+      "model_scope": "All",
+      "clause_type": "who_decides",
+      "clause_text": "The right to determine whether the part needs repair...rests solely with Ampere only.",
+      "source_id": "ampere-warranty",
+      "source": {
+        "source_id": "ampere-warranty",
+        "maker": "Ampere (Greaves)",
+        "document_title": "Ampere warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://ampere-electric.com/warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Altigreen",
+      "model_scope": "neEV",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Battery has been charged using a charger not approved by ALTIGREEN",
+      "source_id": "altigreen-warranty",
+      "source": {
+        "source_id": "altigreen-warranty",
+        "maker": "Altigreen",
+        "document_title": "Altigreen vehicle warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.altigreen.com/vehicle-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Altigreen",
+      "model_scope": "neEV",
+      "clause_type": "storage_condition",
+      "clause_text": "Battery has not been charged to 100% at least once in 7 days",
+      "source_id": "altigreen-warranty",
+      "source": {
+        "source_id": "altigreen-warranty",
+        "maker": "Altigreen",
+        "document_title": "Altigreen vehicle warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.altigreen.com/vehicle-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Altigreen",
+      "model_scope": "neEV",
+      "clause_type": "storage_condition",
+      "clause_text": "Battery has been left at State of Charge less than 5% for more than 7 days",
+      "source_id": "altigreen-warranty",
+      "source": {
+        "source_id": "altigreen-warranty",
+        "maker": "Altigreen",
+        "document_title": "Altigreen vehicle warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.altigreen.com/vehicle-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": ""
+      }
+    },
+    {
+      "maker": "Altigreen / Exponent",
+      "model_scope": "neEV TEZ",
+      "clause_type": "method_disclosed",
+      "clause_text": "Capacity measured on a CC-CV profile with 54A during the constant-current phase. Minimum of 70% of usable capacity after the 3000th cycle.",
+      "source_id": "altigreen-tez",
+      "source": {
+        "source_id": "altigreen-tez",
+        "maker": "Altigreen / Exponent",
+        "document_title": "neEV TEZ battery warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.altigreen.com/tez-battery-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": "The only document in the entire audit that discloses a measurement method."
+      }
+    },
+    {
+      "maker": "Altigreen / Exponent",
+      "model_scope": "neEV TEZ",
+      "clause_type": "charging_exclusion",
+      "clause_text": "Damage caused on the E-Pack due to power failure surges or other charger related faults while using chargers other than Exponent e^pump",
+      "source_id": "altigreen-tez",
+      "source": {
+        "source_id": "altigreen-tez",
+        "maker": "Altigreen / Exponent",
+        "document_title": "neEV TEZ battery warranty page",
+        "document_type": "official_warranty_page",
+        "url": "https://www.altigreen.com/tez-battery-warranty",
+        "date_read": "2026-09-22",
+        "access_notes": "The only document in the entire audit that discloses a measurement method."
+      }
+    }
+  ]
+}

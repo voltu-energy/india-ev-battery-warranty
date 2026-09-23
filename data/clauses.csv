@@ -1,0 +1,47 @@
+maker,model_scope,clause_type,clause_text,source_id
+Tata Motors,"Nexon.ev, Harrier.ev, Curvv.ev, Punch.ev, Tiago.ev (5 of 7 manuals; NOT Sierra.ev, NOT Tigor.ev)",dc_charging_cap,"after a maximum of four DC / opportunity charging cycles, you must use AC charging to 100% State of Charge for the optimum performance of the high voltage battery pack.",tata-nexon-om
+Tata Motors,"Nexon.ev, Harrier.ev, Curvv.ev (3 of 7 manuals)",charging_pattern_warnings,Vehicle shall not have more than 2 warnings related to EV charging pattern between two service intervals.,tata-nexon-om
+Tata Motors,All Tata EV manuals except Tigor.ev (6 of 7),telematics_required,IRA.ev subscription maintenance is crucial for telemetry data to be transferred back to TPEM to allow visibility of the last steady state of the HV Battery for application of the HV Battery Warranty.,tata-nexon-om
+Tata Motors,Nexon.ev,charging_exclusion,"The vehicle / HV battery is subjected to any form of unusual stress, including stress due to improper charging racing; overloading; or other misuse; abuse; or negligent use",tata-nexon-om
+Tata Motors,Nexon.ev,who_decides,to be decided at sole discretion of Tata Passenger Electric Mobility Limited,tata-nexon-om
+Tata Motors,Nexon.ev,claim_restores_to,"at a value equal to steady state SOH before battery repair / replacement or at 80% SOH, whichever is higher",tata-nexon-om
+Tata Motors,All lifetime models,ownership_transfer,It is incumbent on every second (or subsequent) owner to inform TATA MOTORS PASSENGER ELECTRIC MOBILITY LIMITED of the vehicle ownership transfer for HV Battery Warranty to apply.,tata-nexon-om
+Mahindra,"BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",charging_exclusion,"Defect or damage caused due to: (i) damaged or non-certified charger, or (ii) continuing use of charger after noticing any fault, or (iii) charger exposure to extreme weather conditions, or (iv) opening, tampering or modification of the internal components of the charger, or (v) failure to follow Mahindra's instructions / guidelines with respect to proper charging and charger installation.",mahindra-be6
+Mahindra,"BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",charging_exclusion,Any electricity surge or electricity dip or any fluctuation while charging the vehicle.,mahindra-be6
+Mahindra,"BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",who_decides,"Mahindra reserves the right to appoint its own engineer or an independent consultant engineer to inspect the vehicle prior to determine whether any repair or replacement of the part(s) covered, is required.",mahindra-be6
+Mahindra,"BE 6, BE 6 FE, XEV 9e, XEV 9S (all 4 guides)",service_condition,Battery is not serviced at a Mahindra Authorised Dealer or by a Mahindra Authorised Service Center during regular maintenance and service as recommended,mahindra-be6
+JSW MG Motor India,"ZS EV, Comet EV, Windsor EV (all 3 manuals)",coverage_trigger,"During a capacity check at an Authorised MG EV Dealer if it is determined that battery pack has suffered a capacity drop below acceptable degradation according to the use and ageing of the vehicle, the module below this acceptable degradation will be deemed excessive loss.",mg-zsev
+JSW MG Motor India,"ZS EV, Comet EV, Windsor EV (all 3 manuals)",coverage_exclusion,If the degree of degradation of the high-voltage battery is within the normal aging level,mg-zsev
+JSW MG Motor India,"ZS EV, Comet EV, Windsor EV (all 3 manuals)",who_decides,JSW MG MOTOR's decision is final and binding on the Owner of the vehicle in all warranty matters.,mg-zsev
+JSW MG Motor India,"ZS EV, Comet EV, Windsor EV (all 3 manuals)",charging_exclusion,"2.6.2 Use of improper battery charger, fluids or lubricants.",mg-zsev
+Hyundai Motor India,All,battery_disclaimer,"Air Purifier, Batteries, Tyres & Tubes, or any external accessory originally equipped on Hyundai vehicles are warranted directly by the respective manufacturers and not by HMIL.",hyundai-warranty
+Hyundai Motor India,All,who_decides,HMIL's decision is final and binding on the Owner of the vehicle in all warranty matters.,hyundai-warranty
+Kia India,All EV models,charging_exclusion,"Defects or damage resulting from the use of damaged, non-certified charger; continued use of a faulty charger; exposure of the charger to extreme weather; voltage fluctuation; opening or tampering with charger components; installation of charging infrastructure by an unauthorized electrician/ technician; or failure to follow the charging instructions provided by Kia India",kia-ev-owners
+Kia India,"EV6, EV9",coverage_trigger,for capacity loss below 70% of the original high voltage battery capacity,kia-ev6-om
+Kia India,"EV6, EV9",claim_restores_to,it will provide the vehicle with a high voltage battery capacity of at least 70% of the original battery capacity,kia-ev6-om
+Kia India,All EV models,who_decides,KIN reserves the right for the final decision in all warranty matters,kia-ev-owners
+Citroen India,eC3,charging_exclusion,Neglecting to follow correct charging procedures.,citroen-warranty
+Citroen India,eC3,charging_exclusion,Use of incompatible charging devices.,citroen-warranty
+Citroen India,eC3,coverage_exclusion,Loss of battery capacity due to or resulting from gradual capacity loss is NOT covered under warranty beyond the terms and limits specified.,citroen-warranty
+Toyota Kirloskar Motor,BEV range,coverage_trigger,HV Battery for BEV - Minimum 70% of Battery capacity throughout the Warranty Period.,toyota-warranty
+Mercedes-Benz India,EQ range,charging_exclusion,chargers that do not meet MB technical specifications as mentioned in Owners manual,mb-eq-warranty
+Mercedes-Benz India,EQ range,storage_condition,"The high-voltage battery must be charged at the latest, within 14 days after the state of charge for the high-voltage battery has reached zero",mb-eq-warranty
+Mercedes-Benz India,EQ range,baseline_disclosed,The rated capacity of the high-voltage battery at delivery is recorded during vehicle production and documented by the manufacture... The rated capacity documented for the high-voltage battery at delivery is also specified on the label affixed to the high-voltage battery.,mb-eq-warranty
+Mercedes-Benz India,EQ range,jurisdiction,"The Courts at Pune, Maharashtra shall have exclusive jurisdiction to decide any dispute/ claim arising under this Battery Certificate.",mb-eq-warranty
+Ather Energy,"450X, 450S, Rizta, 450 Apex",coverage_trigger,shall not degrade beyond 30% of the published nominal capacity,ather-warranty
+Ather Energy,"450X, 450S, Rizta, 450 Apex",charging_condition,charging the Battery only using charger provided by the Ather,ather-warranty
+Ather Energy,"450X, 450S, Rizta, 450 Apex",who_decides,as measured by Ather's standard testing procedure,ather-warranty
+Ola Electric,S1 range,commercial_exclusion,"Ola Electric Battery Top-up Warranty Plan is applicable for to all retail customers only, not applicable to commercial and fleet customers",ola-tnc
+Ola Electric,S1 range,who_decides,"Battery Health certification will be done by the company only after the scooter has been driven for more than 10,000 kms",ola-tnc
+TVS Motor,iQube,who_decides,the Company's decision either to repair or replace the affected parts will be final.,tvs-iqube-om
+TVS Motor,iQube,charging_condition,Charge the batteries only using provided charger,tvs-iqube-om
+Bajaj Auto,Chetak,charging_exclusion,Any failure arising due to use of non-recommended battery charger,bajaj-chetak-tc
+Bajaj Auto,Chetak,charging_exclusion,any damage to the Chetak or the provided equipment due to voltage above 250V rms or malfunction or earthing related issues or any other electrical related issues at charging place,bajaj-chetak-tc
+Ampere (Greaves),All,charging_exclusion,Charging the batteries with other brand chargers/non-recommended chargers,ampere-warranty
+Ampere (Greaves),All,charging_exclusion,Using unauthorized charging profiles and fast charging options,ampere-warranty
+Ampere (Greaves),All,who_decides,The right to determine whether the part needs repair...rests solely with Ampere only.,ampere-warranty
+Altigreen,neEV,charging_exclusion,Battery has been charged using a charger not approved by ALTIGREEN,altigreen-warranty
+Altigreen,neEV,storage_condition,Battery has not been charged to 100% at least once in 7 days,altigreen-warranty
+Altigreen,neEV,storage_condition,Battery has been left at State of Charge less than 5% for more than 7 days,altigreen-warranty
+Altigreen / Exponent,neEV TEZ,method_disclosed,Capacity measured on a CC-CV profile with 54A during the constant-current phase. Minimum of 70% of usable capacity after the 3000th cycle.,altigreen-tez
+Altigreen / Exponent,neEV TEZ,charging_exclusion,Damage caused on the E-Pack due to power failure surges or other charger related faults while using chargers other than Exponent e^pump,altigreen-tez

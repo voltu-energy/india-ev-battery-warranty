@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Working files that must not be published.
+# Manufacturer documents are read at source and cited here, never redistributed from
+# this repository. Keep local copies out of git.
+*.pdf
+scratch/

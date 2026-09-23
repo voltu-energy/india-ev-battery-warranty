@@ -1,0 +1,48 @@
+maker,model,segment,warranty_years,warranty_km,soh_floor_pct,who_measures,method_disclosed,owner_can_dispute,source_id,notes
+Tata Motors,Nexon.ev 45,4W,lifetime_15,unlimited,70,TPEM via IRA.ev telematics,NOT_DISCLOSED,NOT_ADDRESSED,tata-nexon-om,"Second registration onwards: 8 years / 160000 km. Claim restores to steady-state SOH before repair or 80%, whichever is higher."
+Tata Motors,Harrier.ev,4W,lifetime_15,unlimited,70,TPEM via IRA.ev telematics,NOT_DISCLOSED,NOT_ADDRESSED,tata-harrier-om,Second registration onwards: 10 years / 200000 km.
+Tata Motors,Curvv.ev,4W,lifetime_15,unlimited,70,TPEM via IRA.ev telematics,NOT_DISCLOSED,NOT_ADDRESSED,tata-curvv-om,Second registration onwards: 8 years / 160000 km.
+Tata Motors,Punch.ev 40,4W,lifetime_15,unlimited,70,TPEM via IRA.ev telematics,NOT_DISCLOSED,NOT_ADDRESSED,tata-punch-om,Second registration onwards: 8 years / 160000 km.
+Tata Motors,Tiago.ev 24,4W,lifetime_15,unlimited,70,TPEM via IRA.ev telematics,NOT_DISCLOSED,NOT_ADDRESSED,tata-tiago-om,Second registration onwards: 8 years / 160000 km.
+Tata Motors,Sierra.ev,4W,lifetime_15,unlimited,70,TPEM via IRA.ev telematics,NOT_DISCLOSED,NOT_ADDRESSED,tata-sierra-om,Carries the HV Battery Warranty and the telematics condition but NOT the DC cycle cap present in five other Tata manuals.
+Tata Motors,Tigor.ev,4W,8,160000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,tata-tigor-om,Carries none of the Lifetime HV Battery Warranty apparatus. Term survives only in an FAQ.
+Tata Motors,Nexon.ev 30,4W,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_ADDRESSED,tata-warranty-web,Smaller pack. Terms appear on no page found.
+Tata Motors,Tiago.ev 19.2,4W,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_ADDRESSED,tata-warranty-web,Smaller pack. Terms appear on no page found.
+Tata Motors,Punch.ev 35,4W,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_ADDRESSED,tata-warranty-web,Smaller pack. Terms appear on no page found.
+Mahindra,BE 6,4W,lifetime_first_reg,unlimited,70,NOT_STATED; Mahindra appoints the inspecting engineer,NOT_DISCLOSED,NOT_ADDRESSED,mahindra-be6,Tiered 85 / 75 / 70. Second registration onwards: 10 years / 200000 km.
+Mahindra,BE 6 FE,4W,lifetime_first_reg,unlimited,70,NOT_STATED; Mahindra appoints the inspecting engineer,NOT_DISCLOSED,NOT_ADDRESSED,mahindra-be6fe,Tiered 85 / 75 / 70.
+Mahindra,XEV 9e,4W,lifetime_first_reg,unlimited,70,NOT_STATED; Mahindra appoints the inspecting engineer,NOT_DISCLOSED,NOT_ADDRESSED,mahindra-xev9e,Tiered 85 / 75 / 70.
+Mahindra,XEV 9S,4W,lifetime_first_reg,unlimited,70,NOT_STATED; Mahindra appoints the inspecting engineer,NOT_DISCLOSED,NOT_ADDRESSED,mahindra-xev9s,Tiered 85 / 75 / 70.
+Mahindra,XUV400,4W,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_ADDRESSED,mahindra-care,No warranty guide published. Owner manual exists as HTML behind a JavaScript portal with no citable URL.
+Mahindra,XUV 3XO EV,4W,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_ADDRESSED,mahindra-care,No battery row in the whole-vehicle warranty table.
+JSW MG Motor India,ZS EV,4W,8,150000,NO_FIGURE_IN_DOCUMENT,Authorised MG EV Dealer,NOT_DISCLOSED,NOT_ADDRESSED,mg-zsev,Commercial use: 3 years / 100000 km. Full manual text contains no percentage of any kind.
+JSW MG Motor India,Comet EV,4W,lifetime_first_owner,120000,NO_FIGURE_IN_DOCUMENT,Authorised MG EV Dealer,NOT_DISCLOSED,NOT_ADDRESSED,mg-comet,Lifetime ends on any change of ownership; then 8 years / 120000 km.
+JSW MG Motor India,Windsor EV,4W,lifetime_first_owner,160000,NO_FIGURE_IN_DOCUMENT,Authorised MG EV Dealer,NOT_DISCLOSED,NOT_ADDRESSED,mg-windsor,Lifetime ends on any change of ownership; then 8 years / 160000 km.
+Hyundai Motor India,IONIQ 5,4W,8,160000,NOT_STATED,NOT_FOUND,NOT_DISCLOSED,NOT_ADDRESSED,hyundai-ioniq5-bro,"The warranty policy page states batteries are warranted by their manufacturers and not by HMIL, and lists no battery row. The 8yr figure appears only in marketing material."
+Hyundai Motor India,Creta Electric,4W,8,160000,NOT_STATED,NOT_FOUND,NOT_DISCLOSED,NOT_ADDRESSED,hyundai-creta-page,Same contradiction as IONIQ 5.
+Kia India,EV6,4W,8,160000,70,NOT_FOUND,NOT_DISCLOSED,NOT_ADDRESSED,kia-ev6-om,"The 70% floor is in the owner manual (p592), not on Kia India's website, which states a capacity warranty with no threshold. Claim restores to 70%, not 100%."
+Kia India,EV9,4W,8,160000,70,NOT_FOUND,NOT_DISCLOSED,NOT_ADDRESSED,kia-ev6-om,Same clause as EV6 on Kia India's page; manual read for EV6.
+Kia India,Carens Clavis EV,4W,lifetime_15,unlimited,70,NOT_FOUND,NOT_DISCLOSED,NOT_ADDRESSED,kia-ev-owners,Second purchaser: 8 years / 160000 km. Commercial: 8 years / 160000 km.
+Kia India,Syros EV,4W,lifetime_15,unlimited,70,NOT_FOUND,NOT_DISCLOSED,NOT_ADDRESSED,kia-ev-owners,Same as Carens Clavis EV.
+BYD India,Atto 3,4W,8,160000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,byd-atto3,"Same terms published for Seal, eMAX 7 and Sealion 7. No standard warranty booklet published."
+Citroen India,eC3 personal,4W,7,140000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,citroen-warranty,"The public web page lists only the vehicle warranty and omits the separate longer battery term, understating cover by four years."
+Citroen India,eC3 commercial,4W,3,125000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,citroen-warranty,Gradual capacity loss excluded beyond limits that the 38-page booklet never specifies.
+Maruti Suzuki,e VITARA,4W,8,160000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,maruti-evitara-pr,Published only in a press release. No owner manual or warranty booklet found online.
+Toyota Kirloskar Motor,BEV range,4W,8,200000,70,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,toyota-warranty,"Taxi, fleet and commercial use drops to 3 years / 100000 km; the document does not say whether the 70% condition survives into that term."
+Mercedes-Benz India,EQA / EQB / EQC / EQG,4W,8,160000,70,MB India authorised dealers,PARTIAL,PARTIAL,mb-eq-warranty,"Rated capacity recorded at production and printed on a label on the pack, obtainable from any authorised dealer. The only maker where an owner can learn the denominator. Jurisdiction fixed at Pune."
+BMW India,BEV range,4W,8,160000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,bmw-warranty,
+Volvo India,BEV range,4W,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_FOUND,NOT_ADDRESSED,volvo-warranty,"Publishes no battery warranty term for India, though Volvo publishes one in other markets."
+Ather Energy,450X / 450S / Rizta,2W,3,30000,70,"Ather, by its own standard testing procedure",NOT_DISCLOSED,NOT_ADDRESSED,ather-warranty,The document names the procedure and never describes it.
+Ather Energy,450 Apex,2W,5,60000,70,Ather,NOT_DISCLOSED,NOT_ADDRESSED,ather-warranty,
+Ather Energy,Eight70 paid extension,2W,8,80000,70,"Ather support, only after 10000 km",NOT_DISCLOSED,NOT_ADDRESSED,ather-faq,
+Ola Electric,S1 range,2W,3,50000,70,"The company only, after 10000 km",NOT_DISCLOSED,NOT_ADDRESSED,ola-tnc,Ola publishes three different base terms across three of its own pages. The paid top-up plan excludes commercial and fleet customers.
+TVS Motor,iQube,2W,3,50000,NOT_STATED,The Company,NOT_DISCLOSED,NOT_ADDRESSED,tvs-iqube-om,
+Bajaj Auto,Chetak,2W,3,50000,60,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,bajaj-chetak-tc,One clause sets a 60% floor; another excludes gradual capacity loss as wear on a consumable.
+Hero MotoCorp,VIDA V1 / VX2,2W,3,30000,70,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,vida-warranty,
+Ampere (Greaves),Nexus / Magnus Neo / Magnus Grand,2W,5,75000,NOT_STATED,"Ampere, solely",NOT_DISCLOSED,NOT_ADDRESSED,ampere-warranty,Sold from 1 Jul 2025.
+Revolt Motors,RV400,2W,8,80000,70,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,revolt-rv400,"Support pages disallowed by robots.txt, so exclusions could not be read."
+River,Indie,2W,3,30000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,river-warranty,"Paid extensions to 5yr/50000km and 8yr/80000km, priced at Rs 4999 and Rs 8399 plus GST."
+Mahindra Last Mile Mobility,Treo,3W,5,120000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,mahindra-treo,
+Piaggio,Ape E-City FX Max,3W,5,200000,NOT_STATED,NOT_STATED,NOT_DISCLOSED,NOT_ADDRESSED,piaggio-apemax,
+Altigreen,neEV,3W,3,100000,70,ALTIGREEN,NOT_DISCLOSED,NOT_ADDRESSED,altigreen-warranty,
+Altigreen / Exponent,neEV TEZ,3W,3,cycles_3000,70,"Exponent, in its sole discretion",DISCLOSED,PARTIAL,altigreen-tez,"The ONLY row in this dataset with a disclosed measurement method: capacity measured on a CC-CV profile at 54A. Warranted by cycles, not km: 3000 cycles to 70% of usable capacity. Technical report to the customer within 7 days."
