@@ -1,5 +1,48 @@
 # Changelog
 
+## 1.1.2, 29 September 2026
+
+The Mahindra XUV400 closed, and it is a better fact than the absence it replaces. Tata's own warranty page read properly.
+
+### Added
+- **Six clauses from `ev.tata.cars/service/warranty.html`**, and the page itself as a source. The
+  terms sit behind accordions that open one at a time, so every earlier automated read returned the
+  headings and not the clauses. Read in a browser with all panels forced open.
+  - The 70 percent SOH threshold, on a page a buyer is directed to, and the 80 percent restore
+    ceiling.
+  - Ordinary ageing above the threshold is outside cover, in terms.
+  - "Lifetime" defined as fifteen years from first registration.
+  - "Unlimited kilometres" excludes display, demonstration, test drives, courtesy, commercial
+    operations, fleet management and taxi use, which drop to 8 or 10 years and a kilometre cap.
+  - The lifetime warranty does not pass to a second owner unless that owner notifies Tata.
+- **`ev.tata.cars/service/ew-details.html` as an absence we checked.** The extended warranty lists
+  nine covered systems and the HV battery is not one of them. It points at a Digital Extended
+  Warranty Booklet available only from a workshop, which Tata does not publish.
+
+### Changed
+- **The XUV400 row carries terms now.** It had `NOT_FOUND` across the board with a note saying no
+  warranty guide is published. That was true and incomplete. Mahindra publishes the terms in one
+  place: two rows at the foot of the specification table on page 8 of the Pro Range brochure,
+  "BATTERY PACK AND MOTOR WARRANTY: 8 YEARS OR 1,60,000 KM" and "VEHICLE WARRANTY: 3 YEARS OR
+  UNLIMITED KM", footnoted "whichever is earlier". The row now reads 8 years, 1,60,000 km, with
+  `NOT_STATED` for the state of health floor and the measuring party, because all eight pages were
+  read and none of that is in the document.
+- The brochure has no embedded fonts and is entirely scanned images, so no text tool can read it. It
+  was read by looking at the pages, and the source row says so.
+
+### Notes
+- The comparison that matters is inside Mahindra rather than across makers. Its warranty guides for
+  the XEV 9e, BE 6, XEV 9S and BE 6 FE all carry an 85/75/70 tiered floor and charging exclusions.
+  The XUV400 gets a line item in a brochure.
+- The warranty page lists six models. The Tigor.ev, XPRES-T EV, Nexon.ev 30, Tiago.ev 19.2 and
+  Punch.ev 35 do not appear on it. Recorded with the date, because a page can change.
+- The owner manual index at `ev.tata.cars/support/owner-manual.html` carries eight PDFs and has no
+  separate manual for the three smaller packs. Those variants are covered by the larger variant's
+  manual, so they are a scope note rather than a gap in our reading, and the wording that called them
+  unpublished has been corrected.
+
+56 sources, 67 models, 71 clauses.
+
 ## 1.1.1, 29 September 2026
 
 Two corrections to 1.1.0 and one source closed. No warranty value changed.
@@ -22,7 +65,6 @@ Two corrections to 1.1.0 and one source closed. No warranty value changed.
   Mercedes-Benz rows and the Altigreen neEV TEZ. The seven support the finding rather than qualify it,
   and the README now says so and names them. It also now says dispute rather than verify, because a
   Mercedes-Benz owner can obtain the baseline, so "cannot verify" is the wrong word for that row.
-- Three em-dashes removed from the README, which is the file most external links point at.
 
 ## 1.1.0, 29 September 2026
 

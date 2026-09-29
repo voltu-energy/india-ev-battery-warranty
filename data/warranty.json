@@ -1,13 +1,13 @@
 {
   "dataset": "india-ev-battery-warranty",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "published": "2026-09-29",
   "licence": "CC BY 4.0",
   "maintainer": "Voltu",
   "counts": {
-    "sources": 54,
+    "sources": 56,
     "models": 67,
-    "clauses": 63
+    "clauses": 71
   },
   "absence_codes": {
     "NOT_FOUND": "No primary document stating this was located. Where we looked is in the notes.",

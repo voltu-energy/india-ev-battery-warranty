@@ -1,7 +1,7 @@
 # India EV Battery Warranty Dataset
 
 Every electric vehicle battery warranty sold in India, read at the manufacturer's own document.
-67 models, 31 makers, 54 source documents, 63 verbatim clauses, four wheel and two and three wheel.
+67 models, 31 makers, 56 source documents, 71 verbatim clauses, four wheel and two and three wheel.
 Every figure here is counted from `data/` rather than typed, because the last three times one was
 typed it was wrong.
 
@@ -9,7 +9,7 @@ The maker figure counts distinct values in the `maker` column, so a pack warrant
 counts separately from the vehicle maker: Altigreen and Altigreen / Exponent are two, as are Mahindra
 and Mahindra Last Mile Mobility. Count companies instead and it is 29.
 
-Version 1.1.1, published 29 September 2026. Documents read 22 September 2026, with the makers added
+Version 1.1.2, published 29 September 2026. Documents read 22 September 2026, with the makers added
 in 1.1.0 read 28 September 2026.
 
 ## Why this exists
@@ -93,7 +93,7 @@ A blank cell would hide the most interesting thing in the dataset, so there are 
 | `NOT_ADDRESSED` | The document does not contemplate this at all. |
 | `NO_FIGURE_IN_DOCUMENT` | The full text was searched and contains no percentage of any kind. Used for MG. |
 | `PARTIAL` | Addressed in part only. See the notes on that row. |
-| `EXCLUDED` | The document addresses this and puts it outside cover. Not a gap; the opposite of one. |
+| `EXCLUDED` | The document addresses this and puts it outside cover. Not a gap, the opposite of one. |
 
 `warranty.json` carries these under `absence_codes` together with `DISCLOSED`, which is not an
 absence but a present-value code for a row where a measurement method is described.
@@ -133,7 +133,7 @@ It is not complete. See `CHANGELOG.md` for the known gaps at first publication.
 
 **1.1.0, 28 September 2026. Six makers were missing, and the published counts were wrong.**
 
-Version 1.0.0 shipped 47 models and claimed 25 makers. The maker figure was in no file at any point;
+Version 1.0.0 shipped 47 models and claimed 25 makers. The maker figure was in no file at any point,
 the maker column held 24 distinct values. Counting it properly exposed the real defect: six makers the
 audit had read never reached `warranty-terms.csv` at all.
 
@@ -193,10 +193,9 @@ software update among the things that may void warranty service. Five clauses re
 document was searched in full for any capacity retention figure: there is none.
 
 **Known gaps, stated rather than hidden.** The BYD documents are held as files rather than at a
-citable BYD URL, because `bydautoindia.com` does not serve to European networks; the source rows carry
-the canonical host and note that a per-document URL is to be substituted once it is reachable. **Strom Motors is closed, and closed the right way.** Its site was unreachable from a European
-network on 28 September, which is not evidence of anything. Retrieved successfully from a third
-network on 29 September: the site is live, serves marketing content and a pre-booking call to action,
+citable BYD URL, because `bydautoindia.com` was unreachable the source rows carry
+the canonical host and note that a per-document URL is to be substituted once it is reachable. **Strom Motors is closed, and closed the right way.** Its site was unreachable form Indian network on 28 September 2026, which is not evidence of anything. Retrieved successfully from a third
+network on 29 September 2026: the site is live, serves marketing content and a pre-booking call to action,
 and links no warranty page, no owner's manual and no terms document. The absence now rests on a
 successful read of a live site rather than on a failed one, which is the only way an absence should
 ever be recorded here.
