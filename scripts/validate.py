@@ -9,9 +9,18 @@ import csv, json, re, sys
 from pathlib import Path
 
 D = Path(__file__).resolve().parent.parent / "data"
-ABSENCES = {"NOT_FOUND", "NOT_STATED", "NOT_DISCLOSED", "NOT_ADDRESSED", "NO_FIGURE_IN_DOCUMENT", "PARTIAL", "DISCLOSED"}
+ABSENCES = {"NOT_FOUND", "NOT_STATED", "NOT_DISCLOSED", "NOT_ADDRESSED", "NO_FIGURE_IN_DOCUMENT",
+             "PARTIAL", "DISCLOSED",
+             # 1.1.0. Stronger than NOT_STATED and the opposite of a gap: the document addresses this
+             # and puts it outside cover. BYD excludes normal capacity attenuation in terms.
+             "EXCLUDED"}
 DOC_TYPES = {"owner_manual_pdf", "warranty_booklet_pdf", "official_warranty_page",
-             "official_model_page", "brochure_pdf", "press_release"}
+             "official_model_page", "brochure_pdf", "press_release",
+             # 1.1.0. A maker that publishes nothing is a result, and a result needs a record.
+             # official_faq_page: the maker's own FAQ is the only page that addresses the battery.
+             # none_located: the URL was reached and serves no warranty document. access_notes must
+             # say how that was established, including any browser pass.
+             "official_faq_page", "none_located"}
 SEGMENTS = {"2W", "3W", "4W"}
 ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -26,6 +35,7 @@ terms = read("warranty-terms.csv")
 clauses = read("clauses.csv")
 
 ids = {s["source_id"] for s in sources}
+by_id = {s["source_id"]: s for s in sources}
 if len(ids) != len(sources):
     errors.append("sources.csv: duplicate source_id")
 
@@ -42,11 +52,21 @@ for i, r in enumerate(terms, 2):
         errors.append(f"warranty-terms.csv line {i}: unknown source_id {r['source_id']}")
     if r["segment"] not in SEGMENTS:
         errors.append(f"warranty-terms.csv line {i}: unknown segment {r['segment']}")
-    # THE RULE: a stated value needs a source. An absence is always allowed.
+    # THE RULE: a stated value needs a source document. An absence is always allowed.
+    #
+    # 1.1.0: this check used to test `not r["source_id"]`, which the unknown-source_id check above
+    # already catches, so it could never fire. It now tests what the rule actually means: the cited
+    # source must be a document. A real figure resting on a none_located record would be a value with
+    # nothing behind it, which is the one defect this dataset cannot carry.
+    src = by_id.get(r["source_id"])
     for field in ("warranty_years", "warranty_km", "soh_floor_pct", "who_measures"):
         v = r[field].strip()
-        if v and v not in ABSENCES and not r["source_id"]:
-            errors.append(f"warranty-terms.csv line {i}: {field} has a value with no source_id")
+        if v and v not in ABSENCES:
+            if not r["source_id"]:
+                errors.append(f"warranty-terms.csv line {i}: {field} has a value with no source_id")
+            elif src and src["document_type"] == "none_located":
+                errors.append(f"warranty-terms.csv line {i}: {field} states '{v}' but its source "
+                              f"{r['source_id']} is a none_located record, so nothing supports it")
     if not r["maker"] or not r["model"]:
         errors.append(f"warranty-terms.csv line {i}: maker and model are required")
 

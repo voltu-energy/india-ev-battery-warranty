@@ -1,0 +1,22 @@
+name: sources still say what we read
+# Weekly, not on push. This job reaches out to 24 manufacturer hosts, so it is rude to run it on
+# every commit and it will fail for reasons that are nobody's fault: a host down for an hour is not a
+# broken pull request.
+#
+# What it catches is the thing the dataset could not catch before 29 September 2026, when four of five
+# BYD India asset URLs stopped serving inside a week: a document quietly changing, or going away,
+# under a value we published.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+jobs:
+  freeze-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Recorded hashes must still match the documents
+        run: python3 scripts/freeze-sources.py --check
