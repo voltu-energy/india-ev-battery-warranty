@@ -9,7 +9,7 @@ The maker figure counts distinct values in the `maker` column, so a pack warrant
 counts separately from the vehicle maker: Altigreen and Altigreen / Exponent are two, as are Mahindra
 and Mahindra Last Mile Mobility. Count companies instead and it is 29.
 
-Version 1.1.0, published 28 September 2026. Documents read 22 September 2026, with the makers added
+Version 1.1.1, published 29 September 2026. Documents read 22 September 2026, with the makers added
 in 1.1.0 read 28 September 2026.
 
 ## Why this exists
@@ -33,11 +33,13 @@ Four things this dataset establishes, and each one is checkable from the files:
   the traction battery for 8 years / 160,000 km and then excludes "the normal attenuation of battery
   capacity" from the scope of that warranty, while stating no state of health floor anywhere in the
   document. The headline term covers failure, not the loss of range the buyer is worried about.
-- **No model grants the owner an independent right to verify or dispute the reading.** This is the
-  finding that holds at 67 out of 67. The `owner_can_dispute` column is an absence code in every row
-  but two, and both of those say so in their own terms: Mercedes-Benz makes the baseline obtainable
-  but offers no dispute route, and Exponent requires a report within seven days while granting no
-  independent right.
+- **No model grants the owner a right to dispute the reading.** The `owner_can_dispute` column reads
+  `NOT_ADDRESSED` in 60 rows and `PARTIAL` in seven. The seven are the interesting ones and they
+  support the finding rather than qualify it: six are Mercedes-Benz, which makes the baseline
+  obtainable and offers no dispute route, and the seventh is the Altigreen neEV TEZ, whose Exponent
+  pack requires a report within seven days while granting no independent right. Read the column before
+  quoting the finding, and say dispute rather than verify: a Mercedes-Benz owner can obtain the
+  denominator, which is why "cannot verify" is the wrong word for that row.
 - **Some warranties impose charging conditions most owners never see.** Five of Tata's seven EV owner
   manuals make it a condition that after four DC charges you charge to 100 percent on AC. Six of the
   seven require a live telematics subscription, because that is how the maker sees the pack. None of
@@ -166,7 +168,7 @@ the spread of terms in the market and lost the longest warranty in it.
 **Hero Electric, added 29 September 2026 from the maker's own booklet**, and it is the most
 conditional warranty in the dataset. Three years, private use only. Commercial use drops it to one
 year on the bike and two on the battery, and private use is defined as consuming **up to 75% of
-charge per day** — take more than that and you are reclassified as commercial. The replacement
+charge per day**. Take more than that and you are reclassified as commercial. The replacement
 threshold is not a percentage but a figure in amp-hours that steps down with age: below 22Ah in the
 first six months, below 18Ah to month 24, below 16Ah to month 36, stated for a 30Ah battery **at C5
 discharge rate**.
@@ -201,7 +203,7 @@ ever be recorded here.
 
 **Tata XPRES-T EV, the largest known gap at 1.0.0, is closed.** Its warranty chapter begins on page
 145 and has now been read. The fleet and taxi variant is warranted "Inclusive of Battery and Electric
-Powertrain" for **3 years or 1,25,000 km** — the shortest battery term of any Tata EV here, against
+Powertrain" for **3 years or 1,25,000 km**, the shortest battery term of any Tata EV here, against
 lifetime terms on the passenger models. The highest-utilisation vehicle carries the least cover.
 
 Nothing in the original 47 rows changed except the Hero MotoCorp note, which now records the paid

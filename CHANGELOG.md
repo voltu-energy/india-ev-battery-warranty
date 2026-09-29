@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.1.1, 29 September 2026
+
+Two corrections to 1.1.0 and one source closed. No warranty value changed.
+
+### Changed
+- **The Tata XPRES-T EV source row now cites the manual itself.** It had pointed at the
+  `ev.tata.cars` homepage rather than a document, with no `sha256` and no `archive_url`, which made it
+  the only PDF-typed source in the set with no checksum. It now carries the manual's own URL on
+  `xprest.tatamotors.com`, its hash and a read date. **25 of 25 PDF sources are hashed.** That row
+  matters more than most: it is the one behind the shortest battery term in the dataset, 3 years or
+  1,25,000 km on the fleet and taxi variant.
+
+### Fixed
+- **1.1.0's own entry for the `sha256` column was stale on release.** It said four rows were populated
+  and twenty remained, which was true while it was being drafted and not by the time it shipped; the
+  commit message said all 24. Corrected here rather than rewritten there, because 1.1.0 is tagged and
+  pushed. The released state was 24 of 24 hashed and 34 rows carrying an archive capture.
+- **The README overstated the dispute finding.** It said `owner_can_dispute` is an absence code in
+  every row but two. The column reads `NOT_ADDRESSED` in 60 rows and `PARTIAL` in seven: six
+  Mercedes-Benz rows and the Altigreen neEV TEZ. The seven support the finding rather than qualify it,
+  and the README now says so and names them. It also now says dispute rather than verify, because a
+  Mercedes-Benz owner can obtain the baseline, so "cannot verify" is the wrong word for that row.
+- Three em-dashes removed from the README, which is the file most external links point at.
+
 ## 1.1.0, 29 September 2026
 
 ### Added
