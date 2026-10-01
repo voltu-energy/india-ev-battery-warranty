@@ -1,5 +1,34 @@
 # Changelog
 
+## 1.1.3, 1 October 2026
+
+The XPRES-T manual changed a denominator two days ago. Three clause scopes and three lines of prose
+in this repository never got the message. Fixed, and the validator now refuses to let it happen again.
+
+### Changed
+- **Every "of seven" became "of eight".** The Tata owner manual index carries eight PDFs and all eight
+  were read on 29 September. The clause scopes in `data/clauses.csv` and `data/warranty.json` still
+  said five of seven, three of seven and six of seven, and `README.md` said it twice in prose. The
+  XPRES-T EV carries none of the three clauses, so every numerator is unchanged and every denominator
+  was wrong.
+  - DC charging cap: **5 of 8** manuals. Absent from Sierra.ev, Tigor.ev and XPRES-T EV.
+  - Charging pattern warnings: **3 of 8** manuals.
+  - Telematics requirement: **6 of 8** manuals. Absent from Tigor.ev and XPRES-T EV.
+
+### Added
+- **A denominator guard in `scripts/validate.py`.** Any clause scope of the form "N of M" must have M
+  equal to the number of owner manuals `sources.csv` holds for that maker, and N no larger than it.
+  The prose in `README.md` and `CHANGELOG.md` is checked the same way, in words. Add a manual without
+  revisiting the scopes and the build fails.
+
+### Notes
+- Nothing here changes a warranty value, a source or a count of models, makers or documents. 67
+  models, 31 makers, 56 documents, unchanged.
+- The defect is worth naming because it is the one this repository exists to rule out: a fraction
+  whose numerator was checked against the documents and whose denominator was typed from memory. The
+  guard checks the denominator against the files, which is the only place either number should ever
+  come from.
+
 ## 1.1.2, 29 September 2026
 
 The Mahindra XUV400 closed, and it is a better fact than the absence it replaces. Tata's own warranty page read properly.

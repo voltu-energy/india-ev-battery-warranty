@@ -9,7 +9,7 @@ The maker figure counts distinct values in the `maker` column, so a pack warrant
 counts separately from the vehicle maker: Altigreen and Altigreen / Exponent are two, as are Mahindra
 and Mahindra Last Mile Mobility. Count companies instead and it is 29.
 
-Version 1.1.2, published 29 September 2026. Documents read 22 September 2026, with the makers added
+Version 1.1.3, published 1 October 2026. Documents read 22 September 2026, with the makers added
 in 1.1.0 read 28 September 2026.
 
 ## Why this exists
@@ -40,7 +40,7 @@ Four things this dataset establishes, and each one is checkable from the files:
   pack requires a report within seven days while granting no independent right. Read the column before
   quoting the finding, and say dispute rather than verify: a Mercedes-Benz owner can obtain the
   denominator, which is why "cannot verify" is the wrong word for that row.
-- **Some warranties impose charging conditions most owners never see.** Five of Tata's seven EV owner
+- **Some warranties impose charging conditions most owners never see.** Five of Tata's eight EV owner
   manuals make it a condition that after four DC charges you charge to 100 percent on AC. Six of the
   seven require a live telematics subscription, because that is how the maker sees the pack. None of
   it appears on the warranty web page a buyer is directed to.
@@ -105,11 +105,11 @@ not find the document. The second says we read it and it is silent.
 
 **A clause belongs to the documents it appears in, not to the maker.**
 
-Tata is the reason this rule exists. Its seven EV owner manuals are not uniform: the DC charging cap
+Tata is the reason this rule exists. Its eight EV owner manuals are not uniform: the DC charging cap
 is in five of them, the telematics requirement in six, the charging warning limit in three. So
 `clauses.csv` carries a `model_scope` column and the validator rejects a clause without one.
 
-"Five of Tata's seven EV owner manuals cap DC fast charging" is supported by this dataset.
+"Five of Tata's eight EV owner manuals cap DC fast charging" is supported by this dataset.
 "Tata caps DC fast charging" is not.
 
 The same applies to the dataset as a whole. It covers 67 models. "No model in this dataset" is a

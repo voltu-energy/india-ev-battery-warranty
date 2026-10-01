@@ -79,6 +79,65 @@ for i, c in enumerate(clauses, 2):
         errors.append(f"clauses.csv line {i}: model_scope is required; a clause with no scope is how "
                       f"'five of seven manuals' becomes 'the maker'")
 
+# THE DENOMINATOR GUARD, added 1 October 2026.
+#
+# A clause scope reads "5 of 7 manuals". Then the XPRES-T EV manual was found and read, the real
+# denominator became eight, and three scopes in clauses.csv, three in warranty.json and three lines of
+# the README went on saying seven for two days. A fraction whose numerator is checked and whose
+# denominator is typed is the exact defect this repository exists to rule out, so it is checked here.
+#
+# Rule: in any clause scope of the form "N of M", M must equal the number of owner-manual documents
+# this dataset holds for that clause's maker. If a manual is added and a scope is not revisited, this
+# fails.
+manuals_by_maker = {}
+for srow in sources:
+    if srow["document_type"] == "owner_manual_pdf":
+        manuals_by_maker[srow["maker"]] = manuals_by_maker.get(srow["maker"], 0) + 1
+
+FRACTION = re.compile(r"\b(\d+)\s+of\s+(\d+)\b")
+for i, c in enumerate(clauses, 2):
+    expected = manuals_by_maker.get(c["maker"])
+    for num, den in FRACTION.findall(c["model_scope"]):
+        if expected is None:
+            errors.append(f"clauses.csv line {i}: scope says '{num} of {den}' but no owner manual "
+                          f"is recorded for {c['maker']}, so the denominator rests on nothing")
+        elif int(den) != expected:
+            errors.append(f"clauses.csv line {i}: scope says '{num} of {den}' but sources.csv holds "
+                          f"{expected} owner manuals for {c['maker']}")
+        elif int(num) > expected:
+            errors.append(f"clauses.csv line {i}: scope says '{num} of {den}', and {num} is more "
+                          f"manuals than exist")
+
+# The same denominators are written out in prose. Catch the word forms too.
+#
+# The prose does not always name the maker in the same clause ("Its eight EV owner manuals are not
+# uniform"), so look back a little for a maker name, and fall back to the only maker that has manuals
+# when there is exactly one.
+WORDS = {"two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
+         "ten": 10, "eleven": 11, "twelve": 12}
+PROSE = re.compile(r"(\w+)\s+EV owner manuals", re.IGNORECASE)
+for doc in ("README.md", "CHANGELOG.md"):
+    try:
+        text = open(doc, encoding="utf-8").read()
+    except OSError:
+        continue
+    for m in PROSE.finditer(text):
+        den = WORDS.get(m.group(1).lower())
+        if den is None:
+            continue
+        back = text[max(0, m.start() - 160):m.start()]
+        named = [mk for mk in manuals_by_maker if mk.split()[0].lower() in back.lower()]
+        if named:
+            expected = manuals_by_maker[named[-1]]
+            who = named[-1]
+        elif len(manuals_by_maker) == 1:
+            who, expected = next(iter(manuals_by_maker.items()))
+        else:
+            continue
+        if den != expected:
+            errors.append(f"{doc}: '{m.group(0)}' but sources.csv holds {expected} owner manuals "
+                          f"for {who}")
+
 unused = ids - {r["source_id"] for r in terms} - {c["source_id"] for c in clauses}
 for u in sorted(unused):
     warnings.append(f"sources.csv: {u} is not referenced by any row")

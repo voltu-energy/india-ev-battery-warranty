@@ -1986,7 +1986,7 @@
   "clauses": [
     {
       "maker": "Tata Motors",
-      "model_scope": "Nexon.ev, Harrier.ev, Curvv.ev, Punch.ev, Tiago.ev (5 of 7 manuals; NOT Sierra.ev, NOT Tigor.ev)",
+      "model_scope": "Nexon.ev, Harrier.ev, Curvv.ev, Punch.ev, Tiago.ev (5 of 8 manuals; NOT Sierra.ev, NOT Tigor.ev, NOT XPRES-T EV)",
       "clause_type": "dc_charging_cap",
       "clause_text": "after a maximum of four DC / opportunity charging cycles, you must use AC charging to 100% State of Charge for the optimum performance of the high voltage battery pack.",
       "source_id": "tata-nexon-om",
@@ -2002,7 +2002,7 @@
     },
     {
       "maker": "Tata Motors",
-      "model_scope": "Nexon.ev, Harrier.ev, Curvv.ev (3 of 7 manuals)",
+      "model_scope": "Nexon.ev, Harrier.ev, Curvv.ev (3 of 8 manuals)",
       "clause_type": "charging_pattern_warnings",
       "clause_text": "Vehicle shall not have more than 2 warnings related to EV charging pattern between two service intervals.",
       "source_id": "tata-nexon-om",
@@ -2018,7 +2018,7 @@
     },
     {
       "maker": "Tata Motors",
-      "model_scope": "All Tata EV manuals except Tigor.ev (6 of 7)",
+      "model_scope": "All Tata EV manuals except Tigor.ev and XPRES-T EV (6 of 8)",
       "clause_type": "telematics_required",
       "clause_text": "IRA.ev subscription maintenance is crucial for telemetry data to be transferred back to TPEM to allow visibility of the last steady state of the HV Battery for application of the HV Battery Warranty.",
       "source_id": "tata-nexon-om",
