@@ -5,7 +5,7 @@ The one rule this enforces: every value that is not an explicit absence must be 
 source document with a date it was read. A cell with a value and no source is the defect this
 dataset exists to avoid.
 """
-import csv, json, re, sys
+import collections, csv, json, re, sys
 from pathlib import Path
 
 D = Path(__file__).resolve().parent.parent / "data"
@@ -14,6 +14,9 @@ ABSENCES = {"NOT_FOUND", "NOT_STATED", "NOT_DISCLOSED", "NOT_ADDRESSED", "NO_FIG
              # 1.1.0. Stronger than NOT_STATED and the opposite of a gap: the document addresses this
              # and puts it outside cover. BYD excludes normal capacity attenuation in terms.
              "EXCLUDED"}
+
+# Where the maker hands a document only to owners and publishes no link to it.
+URL_ABSENT = {"NOT_PUBLISHED_ONLINE"}
 DOC_TYPES = {"owner_manual_pdf", "warranty_booklet_pdf", "official_warranty_page",
              "official_model_page", "brochure_pdf", "press_release",
              # 1.1.0. A maker that publishes nothing is a result, and a result needs a record.
@@ -36,6 +39,19 @@ clauses = read("clauses.csv")
 
 ids = {s["source_id"] for s in sources}
 by_id = {s["source_id"]: s for s in sources}
+# 1.2.0. The same file held under two source_ids splits its clauses into two
+# apparent documents and inflates the source count. The sha256 is what says they
+# are the same file, so it is what catches it.
+_byhash = {}
+for _s in sources:
+    _h = _s["sha256"].strip()
+    if _h:
+        _byhash.setdefault(_h, []).append(_s["source_id"])
+for _h, _ids in _byhash.items():
+    if len(_ids) > 1:
+        errors.append(f"sources.csv: one document is held under {len(_ids)} source_ids "
+                      f"{sorted(_ids)}, sha256 {_h[:12]}. Merge them.")
+
 if len(ids) != len(sources):
     errors.append("sources.csv: duplicate source_id")
 
@@ -44,8 +60,17 @@ for s in sources:
         errors.append(f"sources.csv: {s['source_id']} date_read is not ISO 8601: {s['date_read']}")
     if s["document_type"] not in DOC_TYPES:
         errors.append(f"sources.csv: {s['source_id']} unknown document_type: {s['document_type']}")
-    if not s["url"].startswith("https://"):
-        errors.append(f"sources.csv: {s['source_id']} url is not https")
+    # 1.1.5. A document can be the maker's own and still have no public URL. The Maruti e VITARA
+    # owner's manual is handed to registered owners through the Maruti Suzuki mobile application
+    # and is published nowhere on marutisuzuki.com. That is a fact about the maker, not a hole in
+    # the dataset, so it is recorded as a value rather than disguised with a plausible-looking link.
+    # Such a row must carry a sha256, because the hash is the only thing standing in for the URL.
+    if s["url"] not in URL_ABSENT and not s["url"].startswith("https://"):
+        errors.append(f"sources.csv: {s['source_id']} url is not https and is not one of "
+                      f"{sorted(URL_ABSENT)}")
+    if s["url"] in URL_ABSENT and not s["sha256"].strip():
+        errors.append(f"sources.csv: {s['source_id']} has no public URL, so it must carry a "
+                      f"sha256. Without one there is nothing to identify the document by.")
 
 for i, r in enumerate(terms, 2):
     if r["source_id"] not in ids:
@@ -90,6 +115,7 @@ for i, c in enumerate(clauses, 2):
 # this dataset holds for that clause's maker. If a manual is added and a scope is not revisited, this
 # fails.
 manuals_by_maker = {}
+held_on_purpose = []
 for srow in sources:
     if srow["document_type"] == "owner_manual_pdf":
         manuals_by_maker[srow["maker"]] = manuals_by_maker.get(srow["maker"], 0) + 1
@@ -138,15 +164,129 @@ for doc in ("README.md", "CHANGELOG.md"):
             errors.append(f"{doc}: '{m.group(0)}' but sources.csv holds {expected} owner manuals "
                           f"for {who}")
 
-unused = ids - {r["source_id"] for r in terms} - {c["source_id"] for c in clauses}
+
+# ---- charging-rules.csv ----
+# 1.2.0. An owner-facing layer: the operational rules a maker states, with how much weight the
+# document gives each one. Every rule must quote a clause that is in clauses.csv, so the
+# owner_action wording can never drift away from what the maker actually wrote.
+STRENGTH = {"warranty_condition", "warranty_exclusion", "maker_instruction"}
+try:
+    rules = read("charging-rules.csv")
+except FileNotFoundError:
+    rules = []
+clause_texts = [c["clause_text"] for c in clauses]
+for i, r in enumerate(rules, 2):
+    if r["source_id"] not in ids:
+        errors.append(f"charging-rules.csv line {i}: unknown source_id {r['source_id']}")
+    if r["strength"] not in STRENGTH:
+        errors.append(f"charging-rules.csv line {i}: strength '{r['strength']}' is not one of "
+                      f"{sorted(STRENGTH)}")
+    for field in ("rule", "owner_action", "clause_verbatim"):
+        if not r[field].strip():
+            errors.append(f"charging-rules.csv line {i}: {field} is empty")
+    # THE RULE for this file. The quotation must be findable in clauses.csv.
+    vb = r["clause_verbatim"].strip()
+    if vb and not any(vb in t for t in clause_texts):
+        errors.append(f"charging-rules.csv line {i}: clause_verbatim is not found in any "
+                      f"clauses.csv row. An owner-facing rule must quote a recorded clause.")
+
+unused = ids - {r["source_id"] for r in terms} - {c["source_id"] for c in clauses} - {r["source_id"] for r in rules}
 for u in sorted(unused):
-    warnings.append(f"sources.csv: {u} is not referenced by any row")
+    # 1.2.0. A document can be held on purpose without any row citing it: a second manual that
+    # corroborates the first word for word, or one held as a negative because a rule we scope to
+    # two models is absent from it. Both are evidence about how far a rule reaches, so the
+    # document stays. It must say which, in access_notes, or this is still a warning.
+    note = by_id[u]["access_notes"]
+    if re.search(r"Corroborates \S+|Held as a negative|NOT READ", note):
+        held_on_purpose.append(u)
+    else:
+        warnings.append(f"sources.csv: {u} is not referenced by any row, and access_notes does "
+                        f"not say why it is held. Say 'Corroborates <source_id>', 'Held as a "
+                        f"negative' or 'NOT READ'.")
+
+# ---- the published JSON ----
+# 1.1.4. It used to be hand-maintained and it drifted: at 1.1.3 its arrays held 54 sources and 63
+# clauses, its own counts field claimed 56 and 71, and the CSVs held 56 and 71. Generated now,
+# and regenerated and compared here so it cannot drift again.
+import subprocess
+_check = subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "build-json.py"),
+                         "--check"], capture_output=True, text=True)
+if _check.returncode != 0:
+    errors.append(_check.stdout.strip() or "data/warranty.json is stale")
+
+# ---- counts written into prose ----
+# The README states the size of the dataset in its opening line, and that line went stale every
+# time the dataset grew. Any "N models", "N makers", "N source documents" or "N verbatim clauses"
+# in the README must match what the files hold.
+readme = Path(__file__).resolve().parent.parent / "README.md"
+if readme.exists():
+    live = {
+        "models": len(terms),
+        "makers": len({t["maker"] for t in terms}),
+        "source documents": len(sources),
+        "sources": len(sources),
+        "verbatim clauses": len(clauses),
+        "clauses": len(clauses),
+        "charging rules": len(rules),
+    }
+    # Only the live part of the README. Everything from "## Corrections" down is a dated record
+    # of what was true at the time, and "Version 1.0.0 shipped 47 models" must stay as written.
+    text = readme.read_text(encoding="utf-8").split("## Corrections")[0]
+    for noun, n in live.items():
+        for m in re.finditer(r"\b(\d+)\s+" + noun.replace(" ", r"\s+") + r"\b", text):
+            if int(m.group(1)) != n:
+                errors.append(f"README.md: says '{m.group(0)}' but the files hold {n}")
 
 for w in warnings:
     print(f"warning: {w}")
+# ---- prose counts ----
+# 1.2.0. The README says its figures are counted from data/ rather than typed. Three of them
+# were typed and three of them were wrong, found in an outside review and not by this script.
+# Any number the prose states about the files is now checked here, so the claim is true.
+_disp = collections.Counter(r["owner_can_dispute"] for r in terms)
+_companies = len({r["maker"] for r in terms}) - 2   # Altigreen + Exponent, Mahindra + Mahindra LMM
+# Only the README is checked for these. A past changelog entry states what was true at that
+# release and stays as written: rewriting history to match today's totals would make the file
+# useless as a record. The current release line is checked separately, below.
+for _doc in ("README.md",):
+    _p = Path(__file__).resolve().parent.parent / _doc
+    if not _p.exists():
+        continue
+    _t = _p.read_text()
+    for _pat, _want, _what in [
+        (r"`?NOT_ADDRESSED`?\s+in\s+(\d+)\s+rows", _disp["NOT_ADDRESSED"], "NOT_ADDRESSED rows"),
+        (r"`?PARTIAL`?\s+in\s+(\w+)\s+rows?", None, None),
+        (r"[Cc]ount companies instead and it is (\d+)", _companies, "company count"),
+    ]:
+        if _want is None:
+            continue
+        for _m in re.finditer(_pat, _t):
+            if int(_m.group(1)) != _want:
+                errors.append(f"{_doc}: says {_m.group(0)!r} but the files hold "
+                              f"{_want} for the {_what}")
+# The changelog's release line must land on the current totals, or a reader who counts finds it short.
+_rel = re.search(r"Sources \d+ to (\d+)\.\s+Clauses \d+ to (\d+)\.\s+Charging rules \d+ to (\d+)\.",
+                 (Path(__file__).resolve().parent.parent / "CHANGELOG.md").read_text())
+if not _rel:
+    errors.append("CHANGELOG.md: the current release has no line of the form "
+                  "'Sources N to N. Clauses N to N. Charging rules N to N.', so its figures "
+                  "cannot be checked. Rewording that line silently disables this guard.")
+else:
+    for _got, _want, _what in zip(_rel.groups(), (len(sources), len(clauses), len(rules)),
+                                  ("sources", "clauses", "charging rules")):
+        if int(_got) != _want:
+            errors.append(f"CHANGELOG.md: the current release line ends at {_got} {_what} "
+                          f"but the files hold {_want}")
+
 for e in errors:
     print(f"ERROR: {e}")
 
-print(f"\n{len(sources)} sources, {len(terms)} models, {len(clauses)} clauses")
+if held_on_purpose:
+    print(f"\n{len(held_on_purpose)} document(s) held on purpose and cited by no row:")
+    for u in sorted(held_on_purpose):
+        print(f"  {u}: {by_id[u]['access_notes'].strip()[-105:]}")
+
+print(f"\n{len(sources)} sources, {len(terms)} models, {len(clauses)} clauses, "
+      f"{len(rules)} charging rules")
 print(f"{len(errors)} errors, {len(warnings)} warnings")
 sys.exit(1 if errors else 0)

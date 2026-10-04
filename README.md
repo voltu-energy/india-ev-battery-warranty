@@ -1,16 +1,19 @@
 # India EV Battery Warranty Dataset
 
 Every electric vehicle battery warranty sold in India, read at the manufacturer's own document.
-67 models, 31 makers, 56 source documents, 71 verbatim clauses, four wheel and two and three wheel.
-Every figure here is counted from `data/` rather than typed, because the last three times one was
-typed it was wrong.
+74 models, 32 makers, 89 source documents, 198 verbatim clauses and 133 charging rules, four wheel
+and two and three wheel. Every figure here is counted from `data/` rather than typed, because the
+last three times one was typed it was wrong, and the validator now rejects this line if it drifts
+from the files again.
 
 The maker figure counts distinct values in the `maker` column, so a pack warranted by a third party
 counts separately from the vehicle maker: Altigreen and Altigreen / Exponent are two, as are Mahindra
-and Mahindra Last Mile Mobility. Count companies instead and it is 29.
+and Mahindra Last Mile Mobility. Count companies instead and it is 30.
 
-Version 1.1.3, published 1 October 2026. Documents read 22 September 2026, with the makers added
-in 1.1.0 read 28 September 2026.
+Version 1.2.0, published 4 October 2026, the first release since 1.1.3. Documents were read on
+five dates and every row carries its own: 40 on 22 September 2026, 6 on 28 September, 10 on 29
+September, 2 on 3 October and 31 on 4 October. The last of those is the owner's manual sweep this
+release is mostly about.
 
 ## Why this exists
 
@@ -23,27 +26,32 @@ traces to a manufacturer document, with the URL and the date it was read.
 
 Four things this dataset establishes, and each one is checkable from the files:
 
-- **Of 67 models, two name a condition under which state of health is measured and none sets out a
+- **Of 74 models, two name a condition under which state of health is measured and none sets out a
   procedure.** The Altigreen neEV TEZ, whose pack is warranted by Exponent, specifies a CC-CV profile
   at 54A. Hero Electric states replacement thresholds in amp-hours for a 30Ah battery at C5 discharge
   rate. Neither gives a temperature, a state of charge window, a rest period or an instrument, so
   neither is a procedure an owner or a third party could follow and repeat. Every other maker that
   publishes a threshold leaves the measurement wholly undefined.
-- **One maker excludes battery degradation from its battery warranty in terms.** BYD India warrants
+- **Two makers exclude normal battery degradation from the battery warranty while publishing no retention floor.** BYD India warrants
   the traction battery for 8 years / 160,000 km and then excludes "the normal attenuation of battery
   capacity" from the scope of that warranty, while stating no state of health floor anywhere in the
   document. The headline term covers failure, not the loss of range the buyer is worried about.
 - **No model grants the owner a right to dispute the reading.** The `owner_can_dispute` column reads
-  `NOT_ADDRESSED` in 60 rows and `PARTIAL` in seven. The seven are the interesting ones and they
+  `NOT_ADDRESSED` in 67 rows and `PARTIAL` in seven. The seven are the interesting ones and they
   support the finding rather than qualify it: six are Mercedes-Benz, which makes the baseline
   obtainable and offers no dispute route, and the seventh is the Altigreen neEV TEZ, whose Exponent
   pack requires a report within seven days while granting no independent right. Read the column before
   quoting the finding, and say dispute rather than verify: a Mercedes-Benz owner can obtain the
   denominator, which is why "cannot verify" is the wrong word for that row.
-- **Some warranties impose charging conditions most owners never see.** Five of Tata's eight EV owner
-  manuals make it a condition that after four DC charges you charge to 100 percent on AC. Six of the
-  seven require a live telematics subscription, because that is how the maker sees the pack. None of
-  it appears on the warranty web page a buyer is directed to.
+- **Some warranties impose charging conditions most owners never see, and they contradict each
+  other between makers.** Five of Tata's eight EV owner manuals instruct the owner to charge to 100
+  percent on AC after at most four DC charges, printed inside the list of conditions under which the
+  Lifetime battery warranty applies, alongside a condition that the vehicle carry no more than two
+  EV charging pattern warnings between service intervals. Ampere puts fast charging outside cover
+  outright. Altigreen does the opposite of the advice everyone gives and excludes a claim if the
+  battery has not been charged to 100 percent at least once in seven days. None of it appears on the
+  warranty web page a buyer is directed to. `data/charging-rules.csv` collects these as owner-facing
+  rules, each tagged with how much weight the maker's own document gives it.
 - **The absences are half the finding.** A cell reading NOT_FOUND is a result, not a gap in the work.
 
 ## The files
@@ -52,6 +60,8 @@ Four things this dataset establishes, and each one is checkable from the files:
 |---|---|
 | `data/warranty-terms.csv` | One row per model. Term in years and km, state of health floor, who measures, whether a method is disclosed, whether the owner can dispute. |
 | `data/clauses.csv` | One row per clause, quoted verbatim, with the models it applies to. |
+| `data/charging-rules.csv` | One row per operational rule a maker states about charging, with `strength` saying whether the document makes it a condition of cover, an exclusion, or an instruction with no stated consequence. Every `clause_verbatim` must be found inside a `clauses.csv` row, which the validator enforces, so the owner-facing wording cannot drift from what the maker wrote. |
+| `data/warranty.json` | Generated. The whole dataset in one file. Do not edit it: run `python3 scripts/build-json.py`. |
 | `data/sources.csv` | One row per document. URL, type, date read, how it was reached, and what it was: `sha256` of the PDF we read, and `archive_url` for a dated capture. |
 | `data/warranty.json` | All three, joined, for anyone who would rather not parse CSV. |
 | `scripts/validate.py` | Enforces the sourcing rule. Run it before any pull request. |
@@ -78,6 +88,8 @@ us, which is a finding, and the script reports it and exits non-zero.
 
     python3 scripts/freeze-sources.py            # fill in what is missing
     python3 scripts/freeze-sources.py --check    # verify only, for CI
+    python3 scripts/build-json.py                # regenerate data/warranty.json
+    python3 scripts/validate.py                  # everything above, checked
 
 It needs ordinary outbound internet and will not run behind an egress allowlist.
 
@@ -112,7 +124,7 @@ is in five of them, the telematics requirement in six, the charging warning limi
 "Five of Tata's eight EV owner manuals cap DC fast charging" is supported by this dataset.
 "Tata caps DC fast charging" is not.
 
-The same applies to the dataset as a whole. It covers 67 models. "No model in this dataset" is a
+The same applies to the dataset as a whole. It covers 74 models. "No model in this dataset" is a
 claim you can make from it. "No maker in India" is not.
 
 ## What this dataset is not
